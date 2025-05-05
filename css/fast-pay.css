@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.fast-pay {
+  position: fixed;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 50px;
+  top: 50%;
+  right: 0%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+
+  .container {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  span {
+    font-size: 2rem;
+  }
+}
+.fast-pay-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.fast-pay-modal-content {
+  background: #ccc;
+  border-radius: 18px;
+  padding: 24px 18px 18px 18px;
+  min-width: 340px;
+  max-width: 95vw;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+}
+.fast-pay-modal-close {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+.fast-pay-modal-tab,
+.fast-pay-modal-side-tab {
+  background: #fdfdfd;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin: 2px 4px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+.fast-pay-modal-tab.active {
+  background: #5e8c87;
+  color: #fff;
+  border: 2px solid #333;
+}
+.fast-pay-modal-body {
+  margin-top: 12px;
+}

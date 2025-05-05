@@ -1,11 +1,11 @@
 @layer base;
 
 @layer base {
-  * {
-    -webkit-box-sizing: border-box;
+  *{
     box-sizing: border-box;
-   
-  }
+    margin: 0;
+    padding: 0;
+}
 
   body {
     background-color: #f9eff8;
@@ -60,6 +60,11 @@
     border-radius: 10px;
     background-color: #336776;
   }
+}
+
+button{
+  border: none;
+  
 }
 
 /* .whatsapp-icon {
@@ -268,13 +273,14 @@ main {
       color: #004656;
     }
     .Card {
+      cursor: pointer;
       background-position: center 1px;
       background-repeat: no-repeat;
       background-size: contain;
-      height: 410px;
+      height: 210px;
 
       img {
-        width: 150px;
+        width: 100px;
       }
     }
     .Card-1 {
@@ -295,208 +301,20 @@ main {
         }
       }
     }
-    /* .swiper-button-prev {
+    .swiper-button-prev {
       right: 102%;
     }
     .swiper-button-next {
       right: -5%;
-    } */
-    /* .swiper-button-prev::after,
+    }
+    .swiper-button-prev::after,
     .swiper-button-next::after {
       position: inherit;
       color: #8a7a5a;
       font-size: 60px;
-    } */
-  }
-
-  .RamdanProjects {
-    h2 {
-      color: #004656;
-    }
-    .Projects {
-      .project {
-        background-color: #e6e6e6;
-        color: #004656;
-        border-radius: 15px;
-        &.active {
-          background-color: #009174;
-          color: #fff;
-        }
-      }
-    }
-    .Ramdan {
-      margin-bottom: 5rem;
-
-      .CardBox {
-        .imgbox {
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
-            0 1px 3px rgba(0, 0, 0, 0.06);
-          border-radius: 10px;
-          text-align: center;
-          .topbox {
-            border-radius: 15px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            background-color: #479183;
-            color: #fff;
-            h1 {
-              font-size: 20px;
-            }
-          }
-        }
-        .text-layer {
-          font-size: 20px;
-          background-color: #ffff;
-          border-radius: var(--border-radius);
-          border-top-right-radius: 0;
-          border-top-left-radius: 0;
-          .fristRow {
-            background-color: #f2f2f2;
-            border-radius: 15px;
-            p {
-              /* color: #336776; */
-              font-size: 14px;
-              span:nth-child(1) {
-                color: #28564d;
-              }
-              span:nth-child(2) {
-                color: #000;
-              }
-            }
-            .secandRow {
-              width: 90%;
-              .progress {
-                background-color: #ddd2bf;
-                height: 15px;
-                font-size: 15px;
-              }
-              .progress-bar {
-                background-color: #22b573;
-              }
-            }
-          }
-
-          .thridRow {
-            .form-control {
-              background: transparent;
-              border-radius: 15px;
-              width: 75%;
-              &::placeholder {
-                color: #4d4d4d;
-              }
-            }
-            .btn-add {
-              background-color: #22b573;
-              width: 50%;
-              color: #fff;
-              border-radius: 15px;
-            }
-          }
-          .InputRow {
-            .form-control {
-              background: transparent;
-              border-radius: 15px;
-              width: 50%;
-
-              &::placeholder {
-                color: #4d4d4d;
-              }
-            }
-          }
-
-          .fixed {
-            label {
-              display: inline-block;
-              padding: 5px;
-              background-color: #22b573;
-              border: 2px solid #ccc;
-              border-radius: 15px;
-              cursor: pointer;
-              font-size: 16px;
-              text-align: center;
-              /* width: 100%; */
-              transition: all 0.3s ease;
-              color: #fff;
-            }
-            & input[type="radio"]:checked + label {
-              background-color: #007bff;
-              color: white;
-              border-color: #0056b3;
-            }
-          }
-          .share {
-            label {
-              display: inline-block;
-              padding: 5px;
-              background-color: #22b573;
-              border: 2px solid #ccc;
-              border-radius: 15px;
-              cursor: pointer;
-              font-size: 16px;
-              text-align: center;
-              color: #fff;
-              transition: all 0.3s ease;
-            }
-            & input[type="radio"]:checked + label {
-              background-color: #007bff;
-              color: white;
-              border-color: #0056b3;
-            }
-          }
-          .unit {
-            gap: 10px;
-            label {
-              display: inline-block;
-              padding: 5px;
-              background-color: #22b573;
-              border: 2px solid #ccc;
-              border-radius: 15px;
-              cursor: pointer;
-              font-size: 10px;
-              text-align: center;
-              color: #fff;
-              transition: all 0.3s ease;
-            }
-            & input[type="radio"]:checked + label {
-              background-color: #007bff;
-              color: white;
-              border-color: #0056b3;
-            }
-
-            .form-control {
-              background: transparent;
-              border-radius: 15px;
-              &::placeholder {
-                color: #4d4d4d;
-              }
-            }
-          }
-        }
-      }
-
-      .swiper-button-prev {
-        right: 102%;
-      }
-      .swiper-button-next {
-        right: -5%;
-      }
-      .swiper-button-prev::after,
-      .swiper-button-next::after {
-        position: inherit;
-        color: #8a7a5a;
-        font-size: 60px;
-      }
-    }
-    .infoBox {
-      .button-more {
-        background-color: #35a697 !important;
-        color: #fff;
-        padding: 8px;
-        text-align: center;
-        border-radius: 10px !important;
-      }
     }
   }
+
 
   .AdsBanner {
     .FirstBanner {
@@ -715,44 +533,7 @@ footer {
       }
     }
 
-    .RamdanProjects {
-      .Ramdan,
-      .Projects {
-        .CardBox {
-          .text-layer {
-            .thridRow {
-              gap: 5px;
-              .form-control {
-                background: transparent;
-                border-radius: 15px;
-                width: 100%;
-                &::placeholder {
-                  color: #4d4d4d;
-                }
-              }
-              .btn-add {
-                background-color: #22b573;
-                width: 100%;
-                color: #fff;
-                border-radius: 15px;
-              }
-            }
-          }
-        }
-        .swiper-button-prev {
-          right: 95%;
-        }
-        .swiper-button-next {
-          right: -4%;
-        }
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-          position: inherit;
-          color: #8a7a5a;
-          font-size: 30px;
-        }
-      }
-    }
+    
   }
 }
 
@@ -942,4 +723,11 @@ footer {
       background-image: none;
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  .usertext{
+    display: none;
+  }
+  
 }

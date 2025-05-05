@@ -17,17 +17,17 @@ const Cardswiper = new Swiper(".ProjectSections", {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
 
     // when window width is >= 640px
     768: {
-      slidesPerView: 2,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 10,
     },
   },
@@ -70,48 +70,48 @@ const RamdanProjectSwiper = new Swiper(".RamdanProjectSwiper", {
 const modal = document.getElementById("exampleModal");
 
 // Add event listener for when the modal is shown
-modal.addEventListener("shown.bs.modal", function () {
-  // Get all input fields inside the modal
-  const inputs = modal.querySelectorAll(".char-input");
+// modal.addEventListener("shown.bs.modal", function () {
+//   // Get all input fields inside the modal
+//   const inputs = modal.querySelectorAll(".char-input");
 
-  // Set focus to the first input when modal opens
-  inputs[0].focus();
+//   // Set focus to the first input when modal opens
+//   inputs[0].focus();
 
-  // Add event listeners to all inputs
-  inputs.forEach(function (input, index) {
-    // Handle input changes for auto-tabbing
-    input.addEventListener("input", function () {
-      // If input has a value and there's a next input, focus it
-      if (this.value.length === 1 && index < inputs.length - 1) {
-        inputs[index + 1].focus();
-      }
+//   // Add event listeners to all inputs
+//   inputs.forEach(function (input, index) {
+//     // Handle input changes for auto-tabbing
+//     input.addEventListener("input", function () {
+//       // If input has a value and there's a next input, focus it
+//       if (this.value.length === 1 && index < inputs.length - 1) {
+//         inputs[index + 1].focus();
+//       }
 
-      // If all inputs are filled, focus the confirm button
-      if (index === inputs.length - 1 && this.value.length === 1) {
-        const confirmButton = modal.querySelector(".btn-confrim");
-        if (confirmButton) {
-          confirmButton.focus();
-        }
-      }
-    });
+//       // If all inputs are filled, focus the confirm button
+//       if (index === inputs.length - 1 && this.value.length === 1) {
+//         const confirmButton = modal.querySelector(".btn-confrim");
+//         if (confirmButton) {
+//           confirmButton.focus();
+//         }
+//       }
+//     });
 
-    // Handle key presses for backspace navigation
-    input.addEventListener("keydown", function (e) {
-      // If backspace is pressed and input is empty, focus previous input
-      if (e.key === "Backspace" && this.value === "" && index > 0) {
-        inputs[index - 1].focus();
-      }
-    });
-  });
+//     // Handle key presses for backspace navigation
+//     input.addEventListener("keydown", function (e) {
+//       // If backspace is pressed and input is empty, focus previous input
+//       if (e.key === "Backspace" && this.value === "" && index > 0) {
+//         inputs[index - 1].focus();
+//       }
+//     });
+//   });
 
-  // Reset input fields when modal is hidden
-  modal.addEventListener("hidden.bs.modal", function () {
-    const inputs = modal.querySelectorAll(".char-input");
-    inputs.forEach(function (input) {
-      input.value = "";
-    });
-  });
-});
+//   // Reset input fields when modal is hidden
+//   modal.addEventListener("hidden.bs.modal", function () {
+//     const inputs = modal.querySelectorAll(".char-input");
+//     inputs.forEach(function (input) {
+//       input.value = "";
+//     });
+//   });
+// });
 
 // // Add this to your JavaScript file
 // function updateGradientPosition() {
@@ -204,3 +204,30 @@ modal.addEventListener("shown.bs.modal", function () {
 
 //   selectedButton.classList.add("active");
 // }
+
+
+
+// MY WORK  
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all elements with the class 'Card'
+  const cards = document.querySelectorAll('.home .Card');
+
+  // Add a click event listener to each card
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', function() {
+      // Store the clicked card index in localStorage
+      localStorage.setItem('selectedCardIndex', idx);
+
+      // Redirect to category.html
+      window.location.href = 'category.html';
+    });
+  });
+});
+document.querySelector('.fast-pay').addEventListener('click', function() {
+  document.getElementById('fastPayModal').style.display = 'flex';
+});
+// Optional: Close modal when clicking outside content
+document.getElementById('fastPayModal').addEventListener('click', function(e) {
+  if (e.target === this) this.style.display = 'none';
+});
