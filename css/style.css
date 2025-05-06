@@ -438,7 +438,7 @@ main {
       position: absolute;
       color: #8a7a5a;
       font-size: 30px;
-    }
+    } 
   }
 }
 
@@ -774,6 +774,8 @@ footer {
     align-items: end;
   }
  
+
+  
 
   
 }
