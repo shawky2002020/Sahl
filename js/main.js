@@ -12,40 +12,36 @@ const Cardswiper = new Swiper(".ProjectSections", {
   loop: true,
   // Default parameters
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 1,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-
-    // when window width is >= 640px
     768: {
       slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 6,
       spaceBetween: 10,
     },
   },
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: ".ProjectSection-button-next",
-  //   prevEl: ".ProjectSection-button-prev",
-  // },
+  autoplay: {
+    delay: 2000, // 3 seconds
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".ProjectSection-button-next",
+    prevEl: ".ProjectSection-button-prev",
+  },
   pagination: {
     el: ".swiper-pagination",
   },
 });
-const RamdanProjectSwiper = new Swiper(".RamdanProjectSwiper", {
+var swiper = new Swiper('.RamdanProjectSwiper', {
   loop: true,
-  // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 10,
-  // Responsive breakpoints
+  navigation: {
+    nextEl: '.RamdanProject-button-next',
+    prevEl: '.RamdanProject-button-prev',
+  },
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -54,16 +50,18 @@ const RamdanProjectSwiper = new Swiper(".RamdanProjectSwiper", {
     },
 
     // when window width is >= 640px
-    640: {
+    
+    1024: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 10,
     },
   },
-  // Navigation arrows
-  navigation: {
-    nextEl: ".RamdanProject-button-next",
-    prevEl: ".RamdanProject-button-prev",
+  autoplay: {
+    delay: 5000, // 3 seconds
+    disableOnInteraction: false,
   },
+  slidesPerView: 3,
+  spaceBetween: 30,
 });
 
 // Get the modal element
@@ -230,4 +228,17 @@ document.querySelector('.fast-pay').addEventListener('click', function() {
 // Optional: Close modal when clicking outside content
 document.getElementById('fastPayModal').addEventListener('click', function(e) {
   if (e.target === this) this.style.display = 'none';
+});
+
+document.querySelectorAll('.swiper-slide').forEach(function(slide) {
+  var amountBtns = slide.querySelectorAll('.amount-btn');
+  amountBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      amountBtns.forEach(function(b) { b.classList.remove('active-amount'); });
+      btn.classList.add('active-amount');
+      // Optionally, set the input value if present
+      var input = slide.querySelector('.custom-card-input');
+      if(input) input.value = btn.textContent.replace(/[^\d]/g, '');
+    });
+  });
 });
