@@ -279,7 +279,7 @@ main {
       color: #004656;
     }
     .container{
-      max-width: 700px;
+      max-width: 768px;
     }
     .Card {
       cursor: pointer;
@@ -438,7 +438,7 @@ main {
       position: absolute;
       color: #8a7a5a;
       font-size: 30px;
-    }
+    } 
   }
 }
 
@@ -479,11 +479,10 @@ footer {
 
   .first {
     background-color: #35a697;
-    margin-right: 3rem;
     text-align: center;
     position: relative;
-    height: 100%;
     z-index: 6;
+    min-height: 300px;
     border-radius: 1rem 1rem 0 0;
     .headfooter {
       z-index: -1;
@@ -495,7 +494,7 @@ footer {
     .footer-text {
       color: #fff;
       z-index: 50; /* Higher than .headfooter */
-      width: 80%;
+      width: 90%;
       margin: auto;
       text-shadow: 0 2px 8px rgba(0,0,0,0.3);
       pointer-events: none; /* So clicks go through to image if needed */
@@ -503,8 +502,13 @@ footer {
   }
   .secand {
     width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
     h5 {
-      color: #fff;
+      color: #acac;
       font-weight: bolder;
       font-size: 20px;
     }
@@ -518,6 +522,12 @@ footer {
     }
   }
   .thrid {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 18px 0 ;
+    gap: 25px;
     .ImgContainer {
       gap: 50px;
       img {
@@ -527,7 +537,7 @@ footer {
     .ImgContainer2 {
       gap: 10px;
       img {
-        width: 100px;
+        width: 80px;
       }
     }
   }
@@ -543,7 +553,7 @@ footer {
       a {
         text-align: center;
         border-radius: 10px;
-        padding: 10px 30px;
+        padding: 4px 30px;
         background-color: #036f7a;
         color: #fff !important ;
         font-size: 17px;
@@ -553,7 +563,7 @@ footer {
       a {
         text-align: center;
         border-radius: 10px;
-        padding: 10px 72px;
+        padding: 5px 72px;
         background-color: #036f7a;
         color: #fff !important ;
         font-size: 17px;
@@ -745,7 +755,6 @@ footer {
       margin-right: 0;
       font-size: 1.2rem;
       padding-bottom: 2rem;
-      height: 300px;
     }
     .first .headfooter {
       z-index: -1;
@@ -774,6 +783,8 @@ footer {
     align-items: end;
   }
  
+
+  
 
   
 }
