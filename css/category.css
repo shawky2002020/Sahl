@@ -55,6 +55,14 @@ h2{
     }
   }
 }
+.CardBox{ 
+  height: 550px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: space-between;
+}
 
 .RamdanProjects {
   h2 {
@@ -236,14 +244,7 @@ h2{
   }
 }
 
-.CardBox{ 
-  height: 550px;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-  justify-content: space-between;
-}
+
 
 .RamdanProjects {
   .Ramdan,
@@ -327,4 +328,48 @@ h2{
   min-width: 90px;
 }
 
+
+
+
+.custom-card {
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(33,154,138,0.08);
+  overflow: hidden;
+  background: #fff;
+  margin: 0 auto;
+  max-width: 420px;
+}
+.custom-card-header {
+  border-radius: 18px 18px 0 0;
+}
+.custom-card-img img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+.amount-btn {
+  min-width: 80px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+.amount-btn:hover {
+  opacity: 0.9;
+}
+.custom-card-body {
+  border-radius: 0 0 18px 18px;
+}
+.progress {
+  background: #e6e6e6;
+  border-radius: 12px;
+  height: 22px;
+}
+.progress-bar {
+  background: #219a8a;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 

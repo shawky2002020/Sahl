@@ -1,5 +1,8 @@
 @layer base;
-
+*{
+  margin: 0;
+  padding: 0;
+}
 @layer base {
   *{
     box-sizing: border-box;
@@ -12,6 +15,8 @@
     direction: rtl;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
   }
   ul {
     list-style: none;
@@ -103,7 +108,8 @@ button{
   background-color: #fff;
   background-image: url("../img/navbarBG.png");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 150px;
 
   .Name {
@@ -132,9 +138,11 @@ button{
     .loginbox {
       height: fit-content;
       color: #447271;
+      direction: ltr;
 
       .basket,
       .usericon {
+        margin: 0 15px 0 0;
         background-color: #d1f2e0;
         border-radius: 50%;
         color: #28564d;
@@ -142,7 +150,6 @@ button{
         width: fit-content;
       }
       .usericon {
-        margin-left: -20px;
         z-index: 3;
       }
       .Badge {
@@ -221,20 +228,9 @@ button{
   }
 }
 
-@media screen and (max-width: 991.9px) {
-  .topBar {
-    height: fit-content;
-    padding-bottom: 2rem;
-  }
-  .navbar {
-    .collapse {
-      .navbar-nav {
-        margin-right: 0;
-      }
-    }
-  }
-}
+
 main {
+  overflow-x: hidden;
   .banner {
     position: relative;
     .img_Layer {
@@ -346,7 +342,6 @@ main {
             background-size: cover;
             height: 100%;
             width: 100%;
-            margin-right: 0.75rem;
           }
           .text {
             color: #fff;
@@ -364,7 +359,6 @@ main {
             background-size: contain;
             height: 100%;
             width: 100%;
-            margin-right: 0.75rem;
           }
           .text {
             color: #28564d;
@@ -387,39 +381,263 @@ main {
     }
   }
 }
+.RamdanProjects {
+  h2 {
+    color: #004656;
+  }
+  .Projects {
+    .project {
+      background-color: #e6e6e6;
+      color: #004656;
+      border-radius: 15px;
+      &.active {
+        background-color: #009174;
+        color: #fff;
+      }
+    }
+  }
+  .Ramdan {
+    margin-bottom: 5rem;
+
+    .CardBox {
+      .imgbox {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+          0 1px 3px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        text-align: center;
+        .topbox {
+          border-radius: 15px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          background-color: #479183;
+          color: #fff;
+          h1 {
+            font-size: 20px;
+          }
+        }
+      }
+      .text-layer {
+        width: 100%;
+        font-size: 20px;
+        background-color: #ffff;
+        border-radius: var(--border-radius);
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        .fristRow {
+          background-color: #f2f2f2;
+          border-radius: 15px;
+          p {
+            /* color: #336776; */
+            font-size: 14px;
+            span:nth-child(1) {
+              color: #28564d;
+            }
+            span:nth-child(2) {
+              color: #000;
+            }
+          }
+          .secandRow {
+            width: 100%;
+            .progress {
+              background-color: #ddd2bf;
+              height: 15px;
+              font-size: 15px;
+            }
+            .progress-bar {
+              background-color: #22b573;
+            }
+          }
+        }
+
+        .InputRow {
+          .form-control {
+            background: transparent;
+            border-radius: 15px;
+            width: 50%;
+
+            &::placeholder {
+              color: #4d4d4d;
+            }
+          }
+        }
+
+        .fixed {
+          label {
+            display: inline-block;
+            padding: 5px;
+            background-color: #22b573;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 200px;
+            transition: all 0.3s ease;
+            color: #fff;
+          }
+          & input[type="radio"]:checked + label {
+            background-color: #007bff;
+            color: white;
+            border-color: #0056b3;
+          }
+        }
+        .share {
+          display: flex;
+          label {
+            display: inline-block;
+            padding: 5px;
+            background-color: #22b573;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            transition: all 0.3s ease;
+            color: #fff;
+          }
+
+          & input[type="radio"]:checked + label {
+            background-color: #007bff;
+            color: white;
+            border-color: #0056b3;
+          }
+        }
+        .unit {
+          label {
+            display: inline-block;
+            padding: 5px;
+            background-color: #22b573;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            transition: all 0.3s ease;
+            color: #fff;
+          }
+          & input[type="radio"]:checked + label {
+            background-color: #007bff;
+            color: white;
+            border-color: #0056b3;
+          }
+
+          .form-control {
+            background: transparent;
+            border-radius: 15px;
+            &::placeholder {
+              color: #4d4d4d;
+            }
+          }
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      right: 102%;
+    }
+    .swiper-button-next {
+      right: -5%;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      position: inherit;
+      color: #8a7a5a;
+      font-size: 60px;
+    }
+  }
+  .infoBox {
+    .button-more {
+      background-color: #35a697 !important;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+      border-radius: 10px !important;
+    }
+  }
+}
+
+
+
+.RamdanProjects {
+  .Ramdan,
+  .Projects {
+    .CardBox {
+      .text-layer {
+        .thridRow {
+          gap: 5px;
+          .form-control {
+            background: transparent;
+            border-radius: 15px;
+            width: 100%;
+            &::placeholder {
+              color: #4d4d4d;
+            }
+          }
+          .btn-add {
+            background-color: #22b573;
+            width: 100%;
+            color: #fff;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+    .swiper-button-prev {
+      left: 0%;
+    }
+    .swiper-button-next {
+      right: -5%;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      position: inherit;
+      color: #8a7a5a;
+      font-size: 30px;
+    }
+  }
+}
+
+
 
 footer {
+  position: relative;
+  z-index: 1000;
   background-image: url("../img/footerBG2.png");
   background-color: #004656;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 15vh;
 
   .first {
     background-color: #35a697;
     margin-right: 3rem;
     text-align: center;
     position: relative;
+    height: 100%;
+    z-index: 6;
+    border-radius: 1rem 1rem 0 0;
     .headfooter {
-      width: 50px;
+      z-index: 5;
+      width: 420px;
       position: absolute;
-      top: -3%;
+      right: 0;
+      top: -30%;
     }
-    * {
+    .footer-text {
+      position: absolute;
+      right: 0;
+      top: 10%; /* Adjust as needed */
+      width: 100%;
       color: #fff;
-    }
-    .socialIncons {
-      gap: 10px;
-      .icon {
-        padding: 5px 10px;
-        font-size: 20px;
-        border-radius: 50%;
-        color: #35a697;
-        background-color: #fff;
-        i {
-          color: #35a697;
-        }
-      }
+      z-index: 50; /* Higher than .headfooter */
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      pointer-events: none; /* So clicks go through to image if needed */
     }
   }
   .secand {
@@ -534,6 +752,19 @@ footer {
     }
 
     
+  }
+}
+@media screen and (max-width: 991.9px) {
+  .topBar {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  .navbar {
+    .collapse {
+      .navbar-nav {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -728,6 +959,10 @@ footer {
 @media screen and (max-width: 768px) {
   .usertext{
     display: none;
+  }
+  .loginbox{
+    width: 80vw;
+
   }
   
 }
