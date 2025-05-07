@@ -2,6 +2,10 @@
 .container{
     text-align: center;
 }
+.title{
+  text-align: center;
+  padding-top: 4rem;
+}
 .category .ProjectSections {
   .swiper-wrapper {
     display: flex;
@@ -131,44 +135,6 @@ h2{
 }
 
 
-.RamdanProjects {
-  .Ramdan,
-  .Projects {
-    .CardBox {
-      .text-layer {
-        .thridRow {
-          gap: 5px;
-          .form-control {
-            background: transparent;
-            border-radius: 15px;
-            width: 100%;
-            &::placeholder {
-              color: #4d4d4d;
-            }
-          }
-          .btn-add {
-            background-color: #22b573;
-            width: 100%;
-            color: #fff;
-            border-radius: 15px;
-          }
-        }
-      }
-    }
-    .swiper-button-prev {
-      left: 0%;
-    }
-    .swiper-button-next {
-      right: -5%;
-    }
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-      position: inherit;
-      color: #8a7a5a;
-      font-size: 30px;
-    }
-  }
-}
 
 .cart-modal {
   position: fixed;

@@ -6,6 +6,10 @@ const bannerSwiper = new Swiper(".bannerSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 3000, // 3 seconds
+    disableOnInteraction: false,
+  }
 });
 
 const Cardswiper = new Swiper(".ProjectSections", {
@@ -16,11 +20,16 @@ const Cardswiper = new Swiper(".ProjectSections", {
   // Responsive breakpoints
   breakpoints: {
     320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    640: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 5,
       spaceBetween: 10,
     },
   },
@@ -37,7 +46,7 @@ const Cardswiper = new Swiper(".ProjectSections", {
   },
 });
 var swiper = new Swiper('.RamdanProjectSwiper', {
-  loop: true,
+  // loop: true,
   navigation: {
     nextEl: '.RamdanProject-button-next',
     prevEl: '.RamdanProject-button-prev',
@@ -46,12 +55,12 @@ var swiper = new Swiper('.RamdanProjectSwiper', {
     // when window width is >= 320px
     320: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
 
     // when window width is >= 640px
     
-    1024: {
+    1404: {
       slidesPerView: 3,
       spaceBetween: 10,
     },

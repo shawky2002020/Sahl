@@ -1,0 +1,461 @@
+body {
+  font-family: 'Tajawal', Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  /* direction: rtl; */
+}
+.cart-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 24px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.cart-main {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #0001;
+  padding: 24px 24px 16px 24px;
+  width: 420px;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border: 1px solid #d6e0db;
+}
+.cart-summary {
+  background: #f5f5f5;
+  border-radius: 12px;
+  padding: 24px 16px 12px 16px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.cart-total-label {
+  color: #888;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+.cart-total-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5d6d63;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+.cart-total-value .currency {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-right: 4px;
+}
+.cart-checkout-btn {
+  background: #e6a100;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  width: 100%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: bold;
+}
+.cart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-form-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 8px;
+  background: #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tab-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 0;
+  background: #e6e6e6;
+  color: #5d6d63;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.tab-btn.active {
+  background: #1ab7a6;
+  color: #fff;
+}
+.cart-form-fields input,
+.cart-form-country input {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: 1px solid #d6e0db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f5f5f5;
+  color: #444;
+}
+.cart-form-country {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.country-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #e6f2ee;
+  border: 1px solid #d6e0db;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.country-flag {
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+  margin-left: 4px;
+}
+.cart-form-payment {
+  margin: 12px 0 0 0;
+}
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  p{
+    height: 100%;
+    width: 100px;
+    font-size: 1.2rem;
+    
+  }
+}
+.pay-types-img-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 6px 0;
+  border: 1px solid #d6e0db;
+  border-radius: 8px;
+  background: #f5f5f5;
+  color: #444;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.payment-methods img {
+  width: 100px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  padding: 2px 8px;
+}
+.payment-label {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2px;
+  margin-top: 4px;
+}
+.payment-desc {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+.payment-fields input {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.payment-row {
+  display: flex;
+  gap: 8px;
+}
+.payment-row input {
+  flex: 1;
+}
+.cart-form-options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+.cart-form-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cart-form-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 8px;
+  justify-content: flex-start;
+}
+.pay-btn {
+  flex: 1;
+  background: #1ab7a6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: bold;
+}
+.cancel-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay-label {
+  color: #1ab7a6;
+  font-size: 1rem;
+  margin-right: 8px;
+  font-weight: bold;
+}
+.cart-form-policy {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 8px;
+}
+.cart-form-policy a {
+  color: #1ab7a6;
+  text-decoration: underline;
+}
+.cart-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 370px;
+}
+.cart-project {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  align-items: flex-start;
+  border: 1px solid #d6e0db;
+}
+.cart-project img {
+  width: 110px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cart-project-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cart-project-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1ab7a6;
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cart-project-title .fa-trash {
+  color: #bdbdbd;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.cart-project-progress {
+  margin-bottom: 4px;
+}
+.progress-bar {
+  background: #e0e0e0;
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  margin-bottom: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background: #1ab7a6;
+  border-radius: 8px;
+}
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #888;
+}
+.cart-project-amount {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 2px 12px;
+  margin-top: 2px;
+  gap: 8px;
+}
+@media (max-width: 900px) {
+  .cart-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .cart-side, .cart-main {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+.cart-project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #b7d2c7;
+  border-radius: 16px;
+  padding: 24px 24px 24px 16px;
+  margin-bottom: 24px;
+  box-shadow: none;
+  min-width: 0;
+  gap: 32px;
+}
+
+.cart-project-info {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cart-project-title {
+  color: #1ab7a6;
+  font-size: 2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.cart-project-title .fa-trash-can {
+  font-size: 2.2rem;
+  color: #1ab7a6;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.cart-project-progress-box {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 16px 12px 12px 12px;
+  margin-bottom: 8px;
+}
+
+.cart-project-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cart-project-progress-labels .label-title {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.cart-project-progress-labels .label-value {
+  color: #1ab7a6;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.cart-project-progress-bar {
+  background: #dbe7e2;
+  border-radius: 8px;
+  height: 24px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.cart-project-progress-bar-inner {
+  background: #6fc7b6;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.4s;
+}
+
+.cart-project-amount-box {
+  background: #fff;
+  border: 1.5px solid #b7d2c7;
+  border-radius: 10px;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  color: #1ab7a6;
+  font-weight: 500;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.cart-project-amount-box .amount {
+  color: #009174;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 8px;
+}
+
+.cart-project-amount-box .currency {
+  color: #888;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.cart-project-img {
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.cart-project-img img {
+  width: 220px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}

@@ -10,7 +10,6 @@
   body {
     direction: rtl;
     margin: 0;
-    padding:0 1rem;
     width: 100%;
     overflow-x: hidden;
     
@@ -29,6 +28,14 @@
     --gradient-start: 55%;
     --gradient-end: 50%;
   }
+  :root {
+    --main-color: #00D28C;         /* Bright green (leaf) */
+    --secondary-color: #00767A;    /* Teal-blue (hand) */
+    --accent-color: #F29C1F;       /* Orange (small leaf) */
+    --light-bg: #F3FDFB;           /* Light background */
+    --dark-color: #004F4F;         /* Darker teal for text */
+  }
+  
 
   a {
     text-decoration: none !important;
@@ -154,6 +161,7 @@ button{
       }
       .usericon {
         z-index: 3;
+        padding: 10px 12px !important;
       }
       .Badge {
         background-color: #f7931e;
@@ -165,8 +173,13 @@ button{
         border-bottom-right-radius: 7px;
         background-color: #b9dd9c;
         height: fit-content;
-        width: fit-content;
+        padding:2px 0;
+        width:200px;
         cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        transform: translateX(30px);
 
         a {
           color: #004656;
@@ -242,6 +255,7 @@ button{
 }
 
 
+
 main {
   overflow-x: hidden;
   width: 100%;
@@ -284,13 +298,15 @@ main {
     }
     .container{
       max-width: 768px;
+      padding-bottom: 2rem;
     }
     .Card {
       cursor: pointer;
       background-position: center 1px;
       background-repeat: no-repeat;
       background-size: contain;
-      height: 210px;
+      height: 230px;
+      margin-bottom: 2rem;
 
       img {
         width: 100px;
@@ -304,7 +320,6 @@ main {
     }
     .swiper-pagination {
       position: relative;
-      top: 30px;
       .swiper-pagination-bullet {
         width: 20px;
         height: 20px;
@@ -325,7 +340,7 @@ main {
     .swiper-button-next::after {
       position: absolute;
       color: #8a7a5a;
-      font-size: 60px;
+      font-size: 20px;
 
     }
   }
@@ -697,6 +712,13 @@ footer {
       }
     }
   }
+  .Ramdan {
+    .swiper-button-prev::after, .swiper-button-next::after {
+  
+      transform: scale(.5);
+
+    }
+}
 }
 
 @media screen and (width: 768px) {
@@ -782,11 +804,14 @@ footer {
   .usertext{
     display: none;
   }
-  .loginbox{
-    /* width: 90% ;
-    background: #000;
-    display: flex; */
-  }
+  .Ramdan {
+    .swiper-button-prev::after, .swiper-button-next::after {
+        font-size: 31px;
+    }
+}
+.logoBoxModile img{
+  width: 100px;
+}
  
 
   
@@ -795,10 +820,21 @@ footer {
 }
 @media screen and (max-width: 576px) {
 
+  .Ramdan {
+    .swiper-button-prev::after, .swiper-button-next::after {
   
+        font-size: 31px;
+    }
+}
     .first .headfooter {
       top: -20% !important;
     
+    }
+    .user{
+      display: none;
+    }
+    .usertext{
+      display: none;
     }
     
 

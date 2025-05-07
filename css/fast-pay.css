@@ -76,3 +76,10 @@
 .fast-pay-modal-body {
   margin-top: 12px;
 }
+
+@media screen and (max-width: 768px)  {
+  .fast-pay{
+    width: 150px;
+    height: 40px;
+  }
+}

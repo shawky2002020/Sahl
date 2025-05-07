@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sahl</title>
+
+    <!--Bootstrap cdn -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!--Font awsome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--Animation -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!--Swiper-->
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <!-- Custom Stylsheet-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css">
+  </head>
+<body>
+  <header>
+    <div class="topBar">
+      <div class="container">
+        <div class="UserBox d-flex justify-content-between">
+          <div class="logoBox p-4 d-none d-lg-block">
+            <img src="img/logo.png" alt="" />
+          </div>
+
+          <div class="Name pt-4 d-none d-lg-block">
+            <img src="img/LogoName.png" class="img-fluid" alt="" />
+          </div>
+
+          <div class="useraction mx-auto mx-lg-0">
+            <div class="logoBoxModile mx-auto d-lg-none text-center">
+              <img src="img/logo.png" class="img-fluid" alt="" />
+              <img src="img/LogoName.png" class="img-fluid" alt="" />
+            </div>
+
+            <div class="loginbox mt-4">
+              <div class="user d-flex align-items-center">
+                <div class="basket p-2 ms-3 position-relative">
+                  <a href="cart.html">
+
+                    <i class="fa-solid fa-cart-shopping fs-4"></i>
+                  </a>
+
+                  <span
+                    class="Badge position-absolute top-0 start-100 translate-middle badge rounded-pill"
+                  >
+                    1
+                  </span>
+                </div>
+                <div class="user-items">
+
+                  <div class="usericon p-2">
+                    <i class="fa-solid fa-user fs-4"></i>
+                  </div>
+                  <div class="usertext px-2">
+                    <a class="me-4">تسجيل دخول</a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="DonateNow d-flex justify-content-end">
+                <!-- <div class="usertext DonateNowBox px-2 mt-3">
+                  <a class="me-4"> تبرع الان </a>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <button
+          class="navbar-toggler me-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse d-lg-flex justify-content-between align-items-center"
+          id="navbarSupportedContent"
+        >
+          <ul
+            class="navbar-nav text-center align-content-between mb-2 mb-lg-0 pe-0"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >عن سهل</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> مشاريعنا </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> تسجيل مستفيد </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> التواصل </a>
+            </li>
+            <li class="nav-item dropdown">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Link
+                  </a>
+
+                  <ul class="dropdown-menu submenu">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+
+                    <li><hr class="dropdown-divider" /></li>
+
+                    <li class="nav-item dropdown">
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        role="button"
+                      >
+                        Link 2
+                      </a>
+                      <ul class="dropdown-menu submenu">
+                        <li>
+                          <a class="dropdown-item" href="#">1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">2</a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="#">3</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    الباقات الخيرية( مجموعة برامج متنوعة )
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    الباقات الخيرية( مجموعة برامج متنوعة )
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    مشاريع الأجهزة الكهربائية
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    مشاريع الأجهزة الكهربائية
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    مشاريع الأجهزة الكهربائية
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">
+                    مشاريع الأجهزة الكهربائية
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Link
+                  </a>
+
+                  <ul class="dropdown-menu submenu">
+                    <li>
+                      <a class="dropdown-item" href="#">Action</a>
+                    </li>
+
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+
+                    <li><hr class="dropdown-divider" /></li>
+
+                    <li>
+                      <a
+                        class="dropdown-item dropdown-toggle"
+                        href="#"
+                        role="button"
+                      >
+                        Link 2
+                      </a>
+                      <ul class="dropdown-menu submenu">
+                        <li>
+                          <a class="dropdown-item" href="#">1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">2</a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item" href="#">3</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="البحث"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="cart-container">
+    <div class="cart-main">
+      <div class="cart-summary">
+        <div class="cart-total-label">المجموع</div>
+        <div class="cart-total-value">
+          <span>500</span>
+          <span class="currency">ر.س</span>
+        </div>
+        <button class="cart-checkout-btn">المتابعة للدفع</button>
+      </div>
+      <form class="cart-form">
+        <div class="cart-form-tabs">
+          <button type="button" class="tab-btn active">متبرع جديد</button>
+          <button type="button" class="tab-btn">متبرع سابق</button>
+        </div>
+        <div class="cart-form-fields">
+          <input type="text" placeholder="الاسم">
+          <input type="text" placeholder="الجوال">
+          <input type="email" placeholder="الايميل">
+          <div class="cart-form-country">
+            <select>
+              <option>+966</option>
+              <option>+20</option>
+              <!-- Add more countries as needed -->
+            </select>
+          </div>
+        </div>
+        <div class="cart-form-payment">
+          <div class="payment-methods">
+            <p>
+              وسيلة الدفع
+            </p>
+            <div class="pay-types-img-container">
+
+              <img src="img/pay-1.png" alt="Apple Pay">
+              <img src="img/pay-2.png" alt="Visa">
+              <img src="img/pay-4.png" alt="MasterCard">
+            </div>
+          </div>
+          <div class="payment-fields">
+            <input type="text" placeholder="رقم البطاقة">
+            <input type="text" placeholder="اسم على البطاقة">
+            <div class="payment-row">
+              <input type="text" placeholder="رمز الامان CCV">
+              <input type="text" placeholder="تاريخ الانتهاء MM">
+              <input type="text" placeholder="YY">
+            </div>
+          </div>
+          <div class="cart-form-options">
+            <label><input type="checkbox"> أرغب في حفظ بيانات البطاقة</label>
+            <label><input type="checkbox"> أشارك كمتبرع مجهول</label>
+          </div>
+        </div>
+        <div class="cart-form-actions">
+          <button type="submit" class="pay-btn"><i class="fa fa-check"></i> الدفع</button>
+          <button type="button" class="cancel-btn"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="cart-form-policy">
+          <label><input type="checkbox" checked> الموافقة على <a href="#">سياسات التبرع</a></label>
+        </div>
+      </form>
+    </div>
+    <div class="cart-side">
+      <div class="cart-project">
+        <img src="img/project1.png" alt="project">
+        <div class="cart-project-info">
+          <div class="cart-project-title">إفطار صائم بالحرم المكي</div>
+          <div class="cart-project-progress">
+            <div class="progress-bar">
+              <span style="width: 50%"></span>
+            </div>
+            <div class="progress-labels">
+              <span>تم جمع: 500,000 ر.س</span>
+              <span>المبلغ المتبقي: 500,000 ر.س</span>
+            </div>
+          </div>
+          <div class="cart-project-amount">
+            <span>مبلغ التبرع</span>
+            <span>100</span>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat .cart-project for each project in the cart -->
+      <div class="cart-project">
+        <img src="img/project2.png" alt="project">
+        <div class="cart-project-info">
+          <div class="cart-project-title">سقيا الحرم المكي</div>
+          <div class="cart-project-progress">
+            <div class="progress-bar">
+              <span style="width: 50%"></span>
+            </div>
+            <div class="progress-labels">
+              <span>تم جمع: 500,000 ر.س</span>
+              <span>المبلغ المتبقي: 500,000 ر.س</span>
+            </div>
+          </div>
+          <div class="cart-project-amount">
+            <span>مبلغ التبرع</span>
+            <span>100</span>
+          </div>
+        </div>
+      </div>
+      <div class="cart-project">
+        <img src="img/project3.png" alt="project">
+        <div class="cart-project-info">
+          <div class="cart-project-title">كفالة تعليمية للأيتام</div>
+          <div class="cart-project-progress">
+            <div class="progress-bar">
+              <span style="width: 50%"></span>
+            </div>
+            <div class="progress-labels">
+              <span>تم جمع: 500,000 ر.س</span>
+              <span>المبلغ المتبقي: 500,000 ر.س</span>
+            </div>
+          </div>
+          <div class="cart-project-amount">
+            <span>مبلغ التبرع</span>
+            <span>1000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col-12 col-lg-3 p-0">
+        <div class="first p-3">
+          <img src="img/headfooter.png" class="headfooter" alt="" />
+          <div class="footer-text">
+
+            <h5>عن مراكز الاحياء</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
+              iure facilis corporis tempore incidunt fugit explicabo maiores
+              molestias error cumque obcaecati, nostrum totam, sint sapiente
+              reprehenderit officia repellendus alias rem.
+            </p>
+          </div>
+          <div
+            class="socialIncons d-flex justify-content-center align-items-center"
+          >
+            <a class="icon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a class="icon">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a class="icon">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a class="icon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a class="icon">
+              <i class="fa-brands fa-snapchat"></i>
+            </a>
+
+            <a class="icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+          <p class="mt-3 text-center d-none d-md-block">
+            جميع الحقوق محفوظة 2025 &#169;
+            
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-2 p-0">
+        <div class="secand p-3 h-100">
+          <ul class="text-center">
+            <h5 >أهم الروابط :</h5>
+            <li>البرامج الخيرية</li>
+            <li>أهم المشارريع</li>
+            <li>الحالات الطارئة</li>
+            <li>الحسابات البنكية</li>
+            <li>المستفيدين</li>
+            <li>التبرع السريع</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 p-0">
+        <div
+          class="thrid h-100 d-flex flex-column justify-content-center align-items-center p-3 p-lg-0"
+        >
+          <div
+            class="ImgContainer d-flex justify-content-between align-items-center"
+          >
+            <img src="img/Logo 1.png" class="img-fluid" alt="" />
+            <img src="img/Logo 1.png" class="img-fluid" alt="" />
+          </div>
+          <div
+            class="ImgContainer2 d-flex justify-content-center align-items-center mt-2"
+          >
+            <img src="img/pay-1.png" class="img-fluid" alt="" />
+            <img src="img/pay-2.png" class="img-fluid" alt="" />
+            <img src="img/pay-4.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 p-0">
+        <div
+          class="fourth d-flex flex-column justify-content-center align-items-center h-100"
+        >
+          <h5>معلومات الاتصال</h5>
+          <div
+            class="fristrow d-flex justify-content-center align-items-center"
+          >
+            <a>
+              <span>0500000</span>
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <a>
+              <span>0120555</span>
+              <i class="fa-solid fa-blender-phone"></i>
+            </a>
+          </div>
+          <div class="Secandrow my-3">
+            <a class="d-inline-block">
+              email@gmail.com <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+          <div
+            class="ThridRow d-flex justify-content-between align-items-center"
+          >
+            <img src="img/pay-6.png" class="img-fluid" alt="" />
+            <img src="img/pay-7.png" class="img-fluid" alt="" />
+          </div>
+          <p class="mt-3 text-center d-md-none">
+            جميع الحقوق محفوظة 2025 &#169;
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+<script src="js/swiper-bundle.js"></script>
+
+<!--Animation-->
+<script src="js/wow.min.js"></script>
+
+<!--Custom Script-->
+<script src="js/main.js"></script>
+
+</html>
