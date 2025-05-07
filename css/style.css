@@ -13,6 +13,7 @@
     padding:0 1rem;
     width: 100%;
     overflow-x: hidden;
+    
   }
   html{
     width: 100vw;
@@ -140,6 +141,7 @@ button{
       height: fit-content;
       color: #447271;
       direction: rtl;
+      width: 100%;
 
       .basket,
       .usericon {
@@ -192,6 +194,8 @@ button{
   }
   .navbar-toggler {
     border: 2px solid #fff;
+    margin-left: 2rem;
+
   }
   .collapse {
     color: #000;
@@ -480,6 +484,7 @@ footer {
   .first {
     background-color: #35a697;
     text-align: center;
+    margin-right: 3rem;
     position: relative;
     z-index: 6;
     min-height: 300px;
@@ -778,9 +783,9 @@ footer {
     display: none;
   }
   .loginbox{
-    width: 80vw;
-    display: flex;
-    align-items: end;
+    /* width: 90% ;
+    background: #000;
+    display: flex; */
   }
  
 
