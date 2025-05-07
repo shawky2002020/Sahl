@@ -61,7 +61,7 @@ i{
   border-radius: 12px;
   padding: 8px 14px;
   display: flex;
-  font-size: 10px;
+  font-size: 12px;
   gap: 1rem;
 }
 .money-collected{
@@ -71,7 +71,7 @@ i{
 
 }
 .custom-card-progress {
-  height: 22px;
+  height: 18;
   background: #ffff;
   border-radius: 12px;
   width: 90%;
@@ -150,8 +150,8 @@ i{
 }
 .custom-card-input {
   flex: 2;
-  font-size: 10px;
-  max-width: 120px;
+  font-size: 1.1rem;
+  max-width: 50%;
   border-radius: 12px;
   text-align: center;
 }
@@ -178,18 +178,19 @@ i{
   width: 290px;
  }
  .amount-btn{
-  font-size: 10px !important;
+  font-size: 14px !important;
   span{
-   font-size: 5px ;
+   font-size: 9px ;
   }
  }
  .custom-card-progress-bar{
   font-size: 10px;
  }
  button{
-  font-size: 8px !important;
+  font-size: 14px !important;
  }
  i{
   font-size: 10px;
  }
+
 }
