@@ -2,12 +2,76 @@ body {
   font-family: 'Tajawal', Arial, sans-serif;
   background: #f8f8f8;
   margin: 0;
-  /* direction: rtl; */
+  width: 100vw;
+  margin: auto;
 }
 p{
   color: #41555B;
+  margin-bottom: 0;
 }
 
+input{
+  border-radius: 8px;
+  
+}
+
+button{
+  font-size: 1.5rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.head{
+  margin: 10rem 3rem 1rem 0;
+  width: 100%;
+}
+
+
+.cart-checkout-btn:hover,
+.cart-checkout-btn:focus {
+  background: #b06d00;
+  color: #fff;
+}
+
+.tab-btn:hover
+ {
+  background: #22B573;
+  color: #fff;
+}
+
+.qty-btn:hover,
+.qty-btn:focus {
+  background: #4ca96b;
+  color: #fff;
+}
+
+.pay-btn:hover,
+.pay-btn:focus {
+  background: #1ab7a6;
+  color: #fff;
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+  background: #a11d23;
+  color: #fff;
+}
+
+.cart-item-remove:hover,
+.cart-item-remove:focus {
+  color: #e74c3c;
+}
+
+label,.text{
+  font-size: 1.4rem;
+  font-weight: 540;
+  color: #41555B;
+}
+.label{
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin: 1rem ;
+}
 
 .cart-container {
   display: flex;
@@ -15,7 +79,8 @@ p{
   align-items: flex-start;
   gap: 32px;
   padding: 24px 0;
-  max-width: 1200px;
+  margin: auto;
+  width: 90vw;
   margin: auto;
 }
 .cart-main {
@@ -23,8 +88,10 @@ p{
   border-radius: 16px;
   box-shadow: 0 2px 12px #0001;
   padding: 24px 24px 16px 24px;
-  width: 420px;
+  width: 500px;
   min-width: 340px;
+  margin-bottom: 5rem;
+  margin-top: 63px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -50,7 +117,6 @@ p{
 }
 
 .cart-total-value .currency {
-  font-size: 1.2rem;
   font-weight: normal;
   margin-right: 4px;
 }
@@ -61,7 +127,7 @@ p{
   border-radius: 0 0 1rem 1rem;
   padding: 12px 0;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: bold;
   cursor: pointer;
   font-weight: bold;
@@ -70,6 +136,7 @@ p{
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 1rem ;
 }
 .cart-form-tabs {
   display: flex;
@@ -99,21 +166,21 @@ p{
 .form-group{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: center;
   margin-bottom: 8px;
-  width: 100%;
+}
+.form-group:not(.bank-form){
+  gap: 12px;
 }
 .cart-form-fields input,
 .cart-form-country input {
   width: 80%;
   padding: 2px 8px;
   margin-bottom: 8px;
-  border: 1px solid #d6e0db;
+  border: 1px solid #336776;
   border-radius: 8px;
   font-size: 1rem;
-  background: #f5f5f5;
-  color: #444;
+  border: #b7adad solid 1px;
 }
 .cart-form-country {
   display: flex;
@@ -122,25 +189,29 @@ p{
   margin-bottom: 8px;
 }
 
-.cart-form-payment {
-  margin: 12px 0 0 0;
-}
 .payment-methods {
   display: flex;
-  justify-content: center;
+  flex-flow:row-reverse nowrap;
+  justify-content: start;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
-  p{
-    height: 100%;
-    width: 100px;
-    font-size: 1.2rem;
-    
+  gap: 1.5rem;
+  .label{
+    white-space: nowrap;
   }
+  .img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+.bank-text{
+  padding:  .5rem;
+  font-weight: 600;
 }
 
 .payment-methods img {
-  width: 100px;
+  width: 80px;
   background: #fff;
   border-radius: 6px;
   border: 1px solid #eee;
@@ -163,7 +234,10 @@ p{
 }
 .payment-row {
   display: flex;
-  gap: 8px;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
 }
 .payment-row input {
   flex: 1;
@@ -173,6 +247,7 @@ p{
   flex-direction: column;
   gap: 4px;
   margin-bottom: 8px;
+  margin: 1rem;
   font-size: 0.95rem;
 }
 .cart-form-options label {
@@ -180,6 +255,7 @@ p{
   align-items: center;
   gap: 6px;
 }
+
 .cart-form-actions {
   display: flex;
   gap: 8px;
@@ -191,14 +267,15 @@ p{
     font-size: 2rem;
   }
 }
+
 .pay-btn {
   background: #22B573;
   color: #fff;
   border: none;
   font-size: 1.2rem;
   border-radius: 8px;
-  width: 165px;
-  height: 55px;
+  width: 120px;
+  height: 35px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -206,19 +283,24 @@ p{
   gap: 6px;
   font-weight: bold;
 }
+
 .cancel-btn {
   background: #C1272D;
   color: #fff;
   border: none;
   border-radius: 8px;
   width: 50px;
-  height: 55px;
+  height: 35px;
   font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  i{
+    font-size: 2rem ;
+  }
 }
+
 .pay-label {
   color: #1ab7a6;
   font-size: 1rem;
@@ -234,6 +316,7 @@ p{
   color: #1ab7a6;
   text-decoration: underline;
 }
+
 .cart-items-list {
   margin-top: 4rem;
   background: #fff;
@@ -249,6 +332,10 @@ p{
   justify-content: flex-start;
   gap: 32px;
   margin-bottom: 24px;
+  border: 1px solid #f0f0f0;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .cart-item-img-title {
@@ -268,7 +355,7 @@ p{
 }
 
 .cart-item-title {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: #1ab7a6;
   font-weight: bold;
   text-align: center;
@@ -308,7 +395,7 @@ p{
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .cart-item-unit {
@@ -333,9 +420,6 @@ p{
   color: #1a7a5c;
   font-weight: 600;
 }
-
-
-
 
 .qty-btn {
   background: #e6f2ee;
@@ -381,13 +465,15 @@ p{
 
 .cart-total-label {
   color: #1a7a5c;
-  font-size: 1.2rem;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-total-value {
   color: #555;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .cart-item-qty {
@@ -419,16 +505,33 @@ p{
 
 
 
-
-
 .cart-total-value {
   color: #59706C;
   font-size: 5rem;
   font-weight: 700;
 }
+@media screen and (max-width: 1300px) {
+  .payment-row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+  .img-container{
+    gap: 2px;
+  }
+  .img-container img{
+    width: 60px;
+  }
+  
+}
 
 
-@media (max-width: 991px) {
+@media (max-width: 1091px) {
+  .label,label{
+    font-size: 18px;
+  }
   .cart-container {
     flex-direction: column;
     align-items: stretch;
@@ -445,9 +548,23 @@ p{
     margin-top: 2rem;
     padding: 16px 8px;
   }
+  .payment-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
+ 
 }
 
 @media (max-width: 768px) {
+  .label,label{
+    font-size: 16px;
+  }
+  
+
+
   .cart-main {
     padding: 12px 4px 4px 4px;
     border-radius: 10px;
@@ -458,7 +575,7 @@ p{
   }
   .cart-total-label,
   .cart-total-value {
-    font-size: 1rem;
+    font-size: 3rem;
   }
   .cart-checkout-btn {
     font-size: 1rem;
@@ -468,8 +585,8 @@ p{
     gap: 6px;
   }
   .cart-form-tabs .tab-btn {
-    font-size: 0.95rem;
-    padding: 12px 0;
+    font-size: 1.3rem;
+    padding: 0;
   }
   .cart-form-fields input,
   .cart-form-country input {
@@ -530,11 +647,16 @@ p{
     font-size: 1rem;
   }
   .cart-total-value {
-    font-size: 1.1rem;
+    font-size: 3rem;
   }
+ 
 }
 
 @media (max-width: 480px) {
+  .head{
+    margin: 3rem 2rem;
+  }
+  
   .cart-container {
     padding: 4px 0;
     gap: 8px;
@@ -542,10 +664,12 @@ p{
   .cart-main {
     padding: 4px 2px 2px 2px;
     border-radius: 6px;
+    margin: 0;
   }
   .cart-summary {
     padding: 8px 2px 2px 2px;
     font-size: 0.9rem;
+    margin: 1rem;
   }
   .cart-form-fields input,
   .cart-form-country input {
@@ -600,44 +724,240 @@ p{
   .cart-total-label {
     font-size: 0.9rem;
   }
-  .cart-total-value {
-    font-size: 0.9rem;
+  
+
+  .label,label{
+    font-size: 14px;
+    margin: 2px 0;
+  }
+  .payment-methods {
+    img{
+    width: 60px;
   }
 }
+
+
+  .cart-form{
+
+    .tab-btn{
+      padding: 1px 0 ;
+      font-size: 15px;
+    }
+    input{
+      height: 25px;
+    }
+    .phone-input-wrapper input{
+      height: 10px;
+      background: #000;
+    }
+    .phone-input-wrapper input[type="text"] , .country-select{
+      height: 25px;
+    }
+    .img-container{
+      gap: 1px;
+      img{
+        width: 60px;
+      }
+    }
+    .payment-row{
+      flex-flow: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    #ccv {
+      width: 130px;
+    }
+    
+    .payment-row input,.exp-date-inputs{
+      height: 25px;
+    }
+    /* .custom-checkbox .checkmark {
+      height: 18px;
+      width: 18px;
+    } */
+    /* .custom-checkbox .checkmark:after {
+      width: 5px;
+      
+    } */
+    .proceed-text{
+      font-size: 1.4rem;
+      margin: 0 8px;
+    }
+    .pay-btn{
+      width: 100px;
+      height: 30px;
+    }
+    .cancel-btn{
+      width: 40px;
+      height: 30px;
+    }
+    .cart-form-policy{
+      font-size: 12px;
+    }
+    .attach-btn{
+      width: 100%;
+      font-size: 12px;
+      margin: 0;
+
+      span{
+        font-size: 8px !important;
+      }
+    }
+    #bank-name{
+      font-size: 12px;
+    }
+  }
+}
+
 .form-row {
   display: flex;
   gap: 18px;
   margin-bottom: 12px;
   justify-content: space-between;
 }
+
 .form-group.half-width {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .form-label {
   font-size: 1.15rem;
   color: #45565c;
-  margin-bottom: 6px;
   font-weight: 500;
   text-align: right;
   width: 100%;
 }
+
+.bank-form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 8px 1rem;
+  label{
+    margin-right: 20px;
+  }
+}
+.accept-code-form{
+  display: flex;
+  flex-flow: row wrap;
+ margin: 8px 0; 
+  label{
+    margin-left: 10px;
+    white-space: nowrap;
+
+  }
+
+}
+
+
+
 .bank-input{
   background: #E6E6E6;
   border: none;
   max-width: 400px;
-  border-radius: 8px;
+  border-radius: 6px;
+  padding: 6px;
 }
 .exp-date-inputs {
   display: flex;
   align-items: center;
   background: #eaeaea;
-  border-radius: 12px;
   padding: 0 10px;
-  width: 100%;
-  height: 44px;
+  height: 35px;
+  border-radius: 9px;
+  width: 200px;
+  margin-top: 5px;
+  transform: translateY(-4px);
+}
+.exp-date-inputs input {
+  border: none;
+  background: transparent;
+  text-align: center;
+  transform: translateY(5px);
+  width: 48%;
+  outline: none;
+  color: #45565c;
+}
+.exp-date-inputs input::placeholder {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+.exp-divider {
+  color: #b0b0b0;
+  font-size: 1.3rem;
+  margin: 0 6px;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-group.half-width {
+    width: 50%;
+  }
+}
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  
+  gap: 8px;
+}
+
+.country-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.country-select {
+  width: 54px;
+  height: 30px;
+  border: 1px solid #bfc9c3;
+  border-radius: 8px;
+  background: #fff url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg') no-repeat 6px center/32px 22px;
+  font-size: 1rem;
+  padding: 0 32px 0 32px;
+  margin-bottom: 9px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  direction: ltr;
+}
+
+.dropdown-icon {
+  position: absolute;
+  left: 8px;
+  pointer-events: none;
+  color: #222;
+  font-size: 1.1em;
+  top: 50%;
+  transform: translateY(-70%);
+  margin-left: 2.5rem;
+}
+.country-select option[data-flag="sa"] {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 16px;
+  padding-left: 30px;
+}
+
+.phone-input-wrapper input[type="text"] {
+  flex: 1;
+  padding: 2px 8px;
+  border: 1px solid #bfc9c3;
+  font-size: 1rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  direction: ltr;
+  justify-content: center;
 }
 .exp-date-inputs input {
   border: none;
@@ -654,16 +974,126 @@ p{
   margin: 0 6px;
   user-select: none;
 }
-.ccv-input {
+#ccv {
   border: none;
-  border-radius: 12px;
-  width: 100%;
-  height: 44px;
-  font-size: 1.2rem;
+  padding: 0 10px;
+  height: 10px !important;
+  width: 170px;
+  font-size: 1.4rem;
   color: #45565c;
-  padding: 0 12px;
   outline: none;
 }
+
+.custom-checkbox {
+  position: relative;
+  padding-right: 32px;
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  a{
+    margin: 0 5px;
+    text-decoration: underline;
+  }
+}
+
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border: 2px solid #22B573;
+  border-radius: 50%;
+  transition: background 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+  background-color: #fff;
+  border: 2px solid #22B573;
+}
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  right: 6px;
+  top: 2px;
+  width: 7px;
+  height: 12px;
+  border: solid #22B573;
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+}
+.checkmark a{
+  margin: 0 10px;
+  background: #000;
+}
+
+.payment-methods img {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.payment-methods img.active {
+  border: 2px solid #22B573;
+  box-shadow: 0 0 8px rgba(34, 181, 115, 0.3);
+  transform: translateY(-2px);
+}
+
+
+#bank-name {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-align-last: center; /* For select text centering in most browsers */
+  direction: rtl;
+  color: #41555B;
+}
+
+#bank-name option {
+  text-align: center;
+}
+.attach-btn {
+  width: 350px;
+  margin: 0 12px;
+  transition: transform 0.2s ease;
+}
+
+.attach-btn:hover {
+  transform: scale(1.05);
+}
+
+.payment-content {
+  display: none;
+}
+
+.payment-content.active {
+  display: block;
+}
+
 @media (max-width: 600px) {
   .form-row {
     flex-direction: column;

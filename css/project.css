@@ -1,0 +1,761 @@
+/* General Styles */
+body {
+  font-family: "Tajawal", Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #41555b;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Project Header */
+.project-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.water-btn {
+  background-color: #00a78e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.water-btn:hover {
+  background-color: #008e78;
+}
+
+/* Project Content Layout */
+.project-content {
+  display: flex;
+  flex-flow: row-reverse;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Styles - Common */
+.donation-card,
+.project-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+/* Donation Card */
+.donation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hadith-text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Donation Amounts */
+.donation-amounts {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.amount-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.amount-btn:hover {
+  opacity: 0.9;
+}
+
+.amount-btn.blue {
+  background-color: #0078d7;
+}
+
+.amount-btn.green {
+  background-color: #22b573;
+}
+
+.amount-btn.yellow {
+  background-color: #f9b233;
+}
+
+/* Custom Amount Input */
+.custom-amount {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: right;
+}
+
+.currency {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+/* Gift Option */
+.gift-option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.gift-icon {
+  color: #22b573;
+  font-size: 18px;
+}
+
+.gift-text {
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #22b573;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Card Selection */
+.card-selection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.card-carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-options {
+  display: flex;
+  gap: 10px;
+}
+
+.card-option {
+  width: 70px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card-option.selected {
+  background-color: #d6f3f0;
+  border: 2px solid #22b573;
+}
+
+.card-option.selected i {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  color: #22b573;
+  font-size: 14px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+}
+
+.preview-link {
+  color: #22b573;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.preview-link:hover {
+  text-decoration: underline;
+}
+
+/* Recipient Info */
+.recipient-info {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.form-group label {
+  width: 60px;
+  font-size: 14px;
+}
+
+.form-input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.phone-input-group {
+  display: flex;
+  flex: 1;
+  gap: 5px;
+}
+
+.country-code {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #f0f0f0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Donation Actions */
+.donation-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.total-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  color: #666;
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #22b573;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #1a9c63;
+}
+
+.cart-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #22b573;
+  font-size: 20px;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  padding-top: 30px;
+}
+
+.project-title {
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px 8px 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.share-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22b573;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.project-image {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+
+
+/* Progress Bar */
+.project-progress {
+  width: 100%;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #22b573;
+  border-radius: 5px;
+}
+
+.progress-percentage {
+  text-align: right;
+  font-size: 14px;
+  color: #22b573;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .project-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .donation-card,
+  .project-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .donation-amounts {
+    flex-wrap: wrap;
+  }
+
+  .amount-btn {
+    flex: 1;
+    min-width: 80px;
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .phone-input-group {
+    width: 100%;
+  }
+
+  .hadith-text {
+    font-size: 16px;
+  }
+
+  .project-title {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  .progress-info {
+    font-size: 12px;
+  }
+}
+/* Project Page Styles */
+.project-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.water-btn {
+  background-color: #00a78e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.project-content {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Donation Card Styles */
+.donation-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hadith-text {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.donation-amounts {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.amount-btn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.amount-btn.blue {
+  background-color: #0078aa;
+}
+
+.amount-btn.green {
+  background-color: #5cb85c;
+}
+
+.amount-btn.orange {
+  background-color: #ffa500;
+}
+
+.custom-amount {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.amount-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  text-align: right;
+}
+
+.amount-input::placeholder {
+  color: #999;
+}
+
+.currency {
+  padding: 10px;
+  background-color: #f8f9fa;
+  color: #666;
+  border-right: 1px solid #ddd;
+}
+
+.gift-option {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.gift-icon {
+  margin-left: 10px;
+  color: #00a78e;
+}
+
+.gift-text {
+  flex: 1;
+  font-size: 14px;
+  color: #555;
+}
+
+.gift-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.complete-order-btn {
+  background-color: #00a78e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.complete-order-btn i {
+  font-size: 16px;
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  flex: 1.5;
+  overflow: hidden;
+}
+
+.project-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00a78e;
+  color: white;
+  height: 5rem;
+  
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.share-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-progress {
+  padding: 15px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.progress-bar-container {
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #00a78e;
+  border-radius: 4px;
+}
+
+.progress-percentage {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00a78e;
+}
+
+/* Statistics Section */
+.statistics-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  color: #00a78e;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e6f7f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.stat-icon i {
+  font-size: 20px;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #00a78e;
+  margin-bottom: 5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+
+  .statistics-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

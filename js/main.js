@@ -231,9 +231,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-document.querySelector('.fast-pay').addEventListener('click', function() {
-  document.getElementById('fastPayModal').style.display = 'flex';
-});
+// document.querySelector('.fast-pay').addEventListener('click', function() {
+//   document.getElementById('fastPayModal').style.display = 'flex';
+// });
 // Optional: Close modal when clicking outside content
 document.getElementById('fastPayModal').addEventListener('click', function(e) {
   if (e.target === this) this.style.display = 'none';
@@ -250,4 +250,8 @@ document.querySelectorAll('.swiper-slide').forEach(function(slide) {
       if(input) input.value = btn.textContent.replace(/[^\d]/g, '');
     });
   });
+
+
+
 });
+
