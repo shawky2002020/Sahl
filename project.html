@@ -32,7 +32,7 @@
       <div class="topBar">
         <div class="container">
           <div class="UserBox d-flex justify-content-between">
-            <div class="logoBox p-4 d-none d-lg-block">
+            <div onclick="window.location.href='index.html'" class="logoBox p-4 d-none d-lg-block">
               <img src="img/logo.png" alt="" />
             </div>
 
@@ -41,7 +41,7 @@
             </div>
 
             <div class="useraction mx-auto mx-lg-0">
-              <div class="logoBoxModile mx-auto d-lg-none text-center">
+              <div onclick="window.location.href='index.html'" class="logoBoxModile mx-auto d-lg-none text-center">
                 <img src="img/logo.png" class="img-fluid" alt="" />
                 <img src="img/LogoName.png" class="img-fluid" alt="" />
               </div>
@@ -50,9 +50,10 @@
                 <div class="user d-flex align-items-center">
                   <div class="basket p-2 ms-3 position-relative">
                     <a href="cart.html">
+
                       <i class="fa-solid fa-cart-shopping fs-4"></i>
                     </a>
-
+  
                     <span
                       class="Badge position-absolute top-0 start-100 translate-middle badge rounded-pill"
                     >
@@ -60,6 +61,7 @@
                     </span>
                   </div>
                   <div class="user-items">
+  
                     <div class="usericon p-2">
                       <i class="fa-solid fa-user fs-4"></i>
                     </div>
@@ -67,11 +69,12 @@
                       <a class="me-4">تسجيل دخول</a>
                     </div>
                   </div>
+  
                 </div>
                 <div class="DonateNow d-flex justify-content-end">
                   <!-- <div class="usertext DonateNowBox px-2 mt-3">
-                      <a class="me-4"> تبرع الان </a>
-                    </div> -->
+                    <a class="me-4"> تبرع الان </a>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -262,9 +265,25 @@
       </nav>
     </header>
 
-    <div class="container py-5 project-page">
+    <div class="container  project-page">
       <div class="project-header">
-        <button class="water-btn">سقيا الماء</button>
+        <div class="project-header-content">
+          <!-- <div class="project-category">
+            <button class="water-btn">سقيا الماء</button>
+          </div> -->
+          <h1 class="project-title-main">مشروع سقيا الماء</h1>
+          <p class="project-description">ساهم في توفير المياه النظيفة للمحتاجين وكن سبباً في إحياء النفوس</p>
+          <div class="project-stats-summary">
+            <div class="stat-summary-item">
+              <i class="fa-solid fa-droplet"></i>
+              <span>تم توفير 5000+ بئر</span>
+            </div>
+            <div class="stat-summary-item">
+              <i class="fa-solid fa-users"></i>
+              <span>استفاد أكثر من 25,000 شخص</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="project-content">
@@ -276,9 +295,9 @@
           </div>
 
           <div class="donation-amounts">
-            <button class="amount-btn blue">500 رس</button>
-            <button class="amount-btn green">100 رس</button>
-            <button class="amount-btn orange">50 رس</button>
+            <button class="amount-btn blue">500 <span >رس</span></button>
+            <button class="amount-btn green">100 <span>رس</span></button>
+            <button class="amount-btn orange">50 <span>رس</span></button>
           </div>
 
           <div class="custom-amount">
@@ -327,6 +346,108 @@
               >تبرع عن أسرتك و أصدقائك و شاركهم الأجر</span
             >
             <input type="checkbox" id="gift_checkbox" class="gift-checkbox" />
+            <!-- <label for="gift_checkbox" class="gift-label">اختيار كهدية</label> -->
+          </div>
+          
+          <!-- Gift Container - Shows when checkbox is checked -->
+          <div class="gift-container" id="gift_container" style="display: none;">
+            <div class="gift-header">
+              <h4>بيانات المهدى إليه</h4>
+            </div>
+            
+            <!-- Donation Amount Section -->
+            <div class="gift-donation-section mb-4">
+              <div class="donation-label">مبلغ التبرع</div>
+              
+              <div class="donation-amount-buttons">
+                <button class="donation-amount-btn blue">50             <span >رس</span>
+</button>
+                <button class="donation-amount-btn gray">100             <span >رس</span>
+</button>
+                <button class="donation-amount-btn green">200             <span >رس</span>
+</button>
+                <button class="donation-amount-btn orange">500             <span >رس</span>
+</button>
+<div class="other-amount-input">
+  <input type="text" placeholder="مبلغ آخر" class="form-control">
+</div>
+              </div>
+              
+            </div>
+            
+            <div class="gift-form">
+              <!-- Gift Category Selection -->
+              <div class="form-group mb-3">
+               
+               <div class="inputs-container">
+
+                 <!-- Recipient Information -->
+                 <div class="form-group mb-3">
+                   <label for="recipient_name" class="form-label">الاسم</label>
+                   <input type="text" class="form-control" id="recipient_name" placeholder="اسم المستلم">
+                 </div>
+               <div class="form-group mb-3">
+                   <label for="recipient_mobile" class="form-label">الجوال</label>
+                   <input type="tel" class="form-control" id="recipient_mobile" placeholder="رقم الجوال">
+                 </div>
+                 <div class="form-group mb-3">
+                   <label for="recipient_email" class="form-label">البريد الإلكتروني</label>
+                   <input type="email" class="form-control" id="recipient_email" placeholder="البريد الإلكتروني">
+                 </div>
+               </div>
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="send_copy_checkbox">
+                  <label class="form-check-label" for="send_copy_checkbox">إرسال نسخة من البطاقة إلى جوالي</label>
+                </div>
+                <label for="gift_category" class="form-label">فئة الإهداء</label>
+                <div class="gift-category-wrapper">
+                  <select id="gift_category" class="form-select gift-category-select">
+                    <option value="" selected disabled>اختيار فئة الإهداء</option>
+                    <option value="mother">إلى أمي الغالية</option>
+                    <option value="father">إلى أبي الغالي</option>
+                    <option value="wife">إلى زوجتي الحبيبة</option>
+                    <option value="husband">إلى زوجي الغالي</option>
+                    <option value="friend">إلى صديقي العزيز</option>
+                  </select>
+                </div>
+                 <!-- Gift Cards Container - Shows when category is selected -->
+                 <div id="gift_cards_container" class="gift-cards-container" style="display: none;">
+                  <div class="gift-cards-grid">
+                    <div class="gift-card">
+                      <input type="radio" name="gift_card" id="card1" class="gift-card-input" checked>
+                      <label for="card1" class="gift-card-label">
+                        <img src="img/blue-card.jpg" alt="بطاقة إهداء">
+                      </label>
+                    </div>
+                    <div class="gift-card">
+                      <input type="radio" name="gift_card" id="card2" class="gift-card-input">
+                      <label for="card2" class="gift-card-label">
+                        <img src="img/blue-card.jpg" alt="بطاقة إهداء">
+                      </label>
+                    </div>
+                    <div class="gift-card">
+                      <input type="radio" name="gift_card" id="card3" class="gift-card-input">
+                      <label for="card3" class="gift-card-label">
+                        <img src="img/blue-card.jpg" alt="بطاقة إهداء">
+                      </label>
+                    </div>
+                    <div class="gift-card">
+                      <input type="radio" name="gift_card" id="card4" class="gift-card-input">
+                      <label for="card4" class="gift-card-label">
+                        <img src="img/blue-card.jpg" alt="بطاقة إهداء">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                <div class="text-center">
+                  <button class="btn btn-primary gift-btn" id="add_another_gift">
+                    <i class="fa-solid fa-plus"></i> إضافة إهداء لشخص آخر
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
         
@@ -374,7 +495,9 @@
         </div>
 
         <!-- Right Card - Project Info -->
-        <div class="project-card">
+        <div class="project-card-container">
+          <div class="project-card">
+
           <div class="project-header-container">
             <h2 class="project-title">سقيا الحرم المكي</h2>
             <button class="share-btn">
@@ -398,6 +521,7 @@
             </div>
             
           </div>
+        </div>
 
         </div>
       </div>
@@ -519,4 +643,5 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/swiper-bundle.js"></script>
   <script src="js/wow.min.js"></script>
+  <script src="js/project.js"></script>
 </html>

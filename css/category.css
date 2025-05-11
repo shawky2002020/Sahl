@@ -2,6 +2,9 @@
 .container{
     text-align: center;
 }
+.sections{
+  margin-bottom: 5rem;
+}
 .title{
   text-align: center;
   padding-top: 4rem;
@@ -20,10 +23,11 @@
   }
   .Card{
     position: relative;
-    height: 300px !important;
-    width: 300px !important;
+    height: 300px ;
+    width: 300px ;
+    margin: auto;
     img{
-      width: 130px !important;
+      width: 130px ;
     }
   }
 }
@@ -181,4 +185,16 @@ h2{
 
 
 
+@media screen and (max-width: 540px) {
+  .sections{
+    margin-bottom: 1rem;
+  }
+  .category .Card{
+    height: 230px !important ;
+    width: 230px !important;
+    img{
+      width: 100px!important;
+    }
+  }
 
+}

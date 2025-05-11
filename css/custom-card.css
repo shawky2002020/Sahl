@@ -42,6 +42,7 @@ i{
   width: 100%;
   height: 100%;
   border-radius: 0;
+  cursor: pointer;
 }
 .custom-card-body-bg {
   border-radius: 0 0 18px 18px;
@@ -85,9 +86,9 @@ i{
   border-radius: 12px;
 }
 .amount-btn {
-  padding: 4px;
+  padding: 2px 4px;
   flex: 1;
-  margin: 0 4px;
+  margin: 0 2px;
 }
 .amount-btn-500 {
   max-width: 100px;
@@ -176,6 +177,9 @@ i{
 @media screen and (max-width: 768px) {
   .custom-card{
   width: 290px;
+ }
+ .custom-card-input{
+  flex: 1;
  }
  .amount-btn{
   font-size: 14px !important;
