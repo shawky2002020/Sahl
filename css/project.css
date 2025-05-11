@@ -15,9 +15,10 @@ body {
 
 /* Project Header */
 .project-header {
+  font-family: brando;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
+  justify-content: start;
+  margin: 40px 0 20px 0;
 }
 
 .water-btn {
@@ -27,7 +28,7 @@ body {
   border-radius: 5px;
   padding: 8px 20px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 2rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -52,20 +53,24 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   padding: 20px;
   width: 100%;
-  max-width: 480px;
+  max-width: 550px;
   position: relative;
 }
 
 /* Donation Card */
 .donation-card {
+  font-family: brando;
+  width: 550px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 4px;
+  border: solid #336776 1px;
 }
 
 .hadith-text {
-  font-size: 18px;
+  font-family: brando;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 10px;
   font-weight: 500;
@@ -124,21 +129,15 @@ body {
   text-align: right;
 }
 
-.currency {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-}
+
 
 /* Gift Option */
 .gift-option {
   display: flex;
+  flex-flow: row-reverse;
   align-items: center;
   width: 100%;
   gap: 10px;
-  background-color: #f9f9f9;
   padding: 10px;
   border-radius: 8px;
 }
@@ -340,8 +339,8 @@ input:checked + .toggle-slider:before {
 
 .checkout-btn {
   width: 100%;
-  padding: 10px;
-  background-color: #22b573;
+  padding: 5px 10px;
+  background-color: #22B573;
   border: none;
   border-radius: 8px;
   color: white;
@@ -363,7 +362,8 @@ input:checked + .toggle-slider:before {
   bottom: 20px;
   left: 20px;
   color: #22b573;
-  font-size: 20px;
+  font-size: 10px;
+
 }
 
 /* Project Card */
@@ -378,14 +378,15 @@ input:checked + .toggle-slider:before {
   border-radius: 8px 8px 0 0;
   font-size: 16px;
   font-weight: bold;
+  font-family: brando;
 }
 
 .share-btn {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-color: #f0f0f0;
   border-radius: 50%;
   display: flex;
@@ -394,6 +395,10 @@ input:checked + .toggle-slider:before {
   color: #22b573;
   cursor: pointer;
   z-index: 1;
+  i{
+    font-size: 2rem;
+
+  }
 }
 
 .project-image {
@@ -403,38 +408,19 @@ input:checked + .toggle-slider:before {
 
 
 
-/* Progress Bar */
-.project-progress {
-  width: 100%;
+.custom-card-progress {
+  height: 18;
+  background: #ffff;
+  border-radius: 12px;
+  width: 90%;
+  margin: auto;
 }
-
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.progress-bar-container {
-  width: 100%;
-  height: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #22b573;
-  border-radius: 5px;
-}
-
-.progress-percentage {
-  text-align: right;
-  font-size: 14px;
-  color: #22b573;
-  font-weight: bold;
-  margin-top: 5px;
+.custom-card-progress-bar {
+  width: 50%;
+  background: #219a8a;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
 }
 
 /* Responsive Design */
@@ -485,26 +471,12 @@ input:checked + .toggle-slider:before {
     padding: 6px 15px;
   }
 
-  .progress-info {
-    font-size: 12px;
-  }
+ 
 }
 /* Project Page Styles */
-.project-header {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
 
-.water-btn {
-  background-color: #00a78e;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 20px;
-  font-weight: bold;
-  font-size: 16px;
-}
+
+
 
 .project-content {
   display: flex;
@@ -512,17 +484,7 @@ input:checked + .toggle-slider:before {
   margin-bottom: 30px;
 }
 
-/* Donation Card Styles */
-.donation-card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 
 .hadith-text {
   text-align: center;
@@ -579,7 +541,6 @@ input:checked + .toggle-slider:before {
 
 .currency {
   padding: 10px;
-  background-color: #f8f9fa;
   color: #666;
   border-right: 1px solid #ddd;
 }
@@ -653,13 +614,7 @@ input:checked + .toggle-slider:before {
   font-weight: bold;
 }
 
-.share-btn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 24px;
-}
+
 
 .project-image img {
   width: 100%;
@@ -667,46 +622,25 @@ input:checked + .toggle-slider:before {
   display: block;
 }
 
-.project-progress {
-  padding: 15px;
-}
+.project-page .money-collected{
+  margin: 1rem;
+  padding: 1rem 0;
+  .custom-card-amount-row{
+    width: 90%;
+    margin: auto;
+  }
+  span{
+    font-size: 1rem;
 
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #555;
+  }
 }
-
-.progress-bar-container {
-  height: 8px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-
-.progress-bar {
-  height: 100%;
-  background-color: #00a78e;
-  border-radius: 4px;
-}
-
-.progress-percentage {
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #00a78e;
-}
-
 /* Statistics Section */
 .statistics-section {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 70%;
-  margin: auto;
+  width: 100%;
+  margin:24px auto;
 }
 
 .stat-item {
@@ -759,3 +693,37 @@ input:checked + .toggle-slider:before {
     gap: 15px;
   }
 }
+
+/* Checkout container and buttons */
+.checkout-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.cart-icon-btn {
+  background-color: #fff;
+  border: 1px solid #00A78E;
+  color: #00A78E;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-icon-btn:hover {
+  background-color: #00A78E;
+  color: #fff;
+}
+
+.cart-icon-btn i {
+  font-size: 18px;
+}
+
+

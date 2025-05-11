@@ -1,20 +1,27 @@
 @layer base;
 
 @layer base {
-  *{
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+  }
+  @font-face {
+    font-family: "brando";
+    src: url("../fonts/alfont_com_Brando-Arabic-Text.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
 
   body {
     direction: rtl;
     margin: 0;
     width: 100%;
     overflow-x: hidden;
-    
+    font-family: brando;
   }
-  html{
+  html {
     width: 100vw;
     overflow-x: hidden;
   }
@@ -29,15 +36,12 @@
     --gradient-end: 50%;
   }
   :root {
-    --main-color: #00D28C;         /* Bright green (leaf) */
-    --secondary-color: #00767A;    /* Teal-blue (hand) */
-    --accent-color: #F29C1F;       /* Orange (small leaf) */
-    --light-bg: #F3FDFB;           /* Light background */
-    --dark-color: #004F4F;         /* Darker teal for text */
+    --main-color: #00d28c; /* Bright green (leaf) */
+    --secondary-color: #00767a; /* Teal-blue (hand) */
+    --accent-color: #f29c1f; /* Orange (small leaf) */
+    --light-bg: #f3fdfb; /* Light background */
+    --dark-color: #004f4f; /* Darker teal for text */
   }
-  
-
- 
 
   .meun-li:hover {
     background-color: var(--light-color);
@@ -72,7 +76,7 @@
     background-color: #336776;
   }
 }
-html{
+html {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -81,11 +85,9 @@ body {
   overflow-x: hidden;
 }
 
-button{
+button {
   border: none;
-  
 }
-
 
 /* .whatsapp-icon {
   position: fixed;
@@ -179,8 +181,8 @@ button{
         border-bottom-right-radius: 7px;
         background-color: #b9dd9c;
         height: fit-content;
-        padding:2px 0;
-        width:200px;
+        padding: 2px 0;
+        width: 200px;
         cursor: pointer;
         display: flex;
         justify-content: center;
@@ -199,7 +201,7 @@ button{
       }
     }
   }
-  .user-items{
+  .user-items {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -216,7 +218,6 @@ button{
   .navbar-toggler {
     border: 2px solid #fff;
     margin-left: 2rem;
-
   }
   .collapse {
     color: #000;
@@ -262,8 +263,6 @@ button{
   }
 }
 
-
-
 main {
   overflow-x: hidden;
   width: 100%;
@@ -304,7 +303,7 @@ main {
     h2 {
       color: #004656;
     }
-    .container{
+    .container {
       max-width: 768px;
       padding-bottom: 2rem;
     }
@@ -349,10 +348,8 @@ main {
       position: absolute;
       color: #8a7a5a;
       font-size: 20px;
-
     }
   }
-
 
   .AdsBanner {
     .FirstBanner {
@@ -429,11 +426,8 @@ main {
   }
   .Ramdan {
     margin-bottom: 5rem;
+  }
 
-  
-
-    }
-  
   .infoBox {
     .button-more {
       background-color: #35a697 !important;
@@ -444,32 +438,26 @@ main {
     }
   }
 }
-.RamdanProject-button-next{
+.RamdanProject-button-next {
   position: absolute;
-  right:0% !important ;
+  right: 0% !important ;
 }
-.RamdanProject-button-prev{
+.RamdanProject-button-prev {
   position: absolute;
   right: 90% !important;
 }
 
-
-
 .RamdanProjects {
   .Ramdan,
   .Projects {
-   
-  
     .swiper-button-prev::after,
     .swiper-button-next::after {
       position: absolute;
       color: #8a7a5a;
       font-size: 30px;
-    } 
+    }
   }
 }
-
-
 
 footer {
   border-radius: 1rem 1rem 0 0;
@@ -481,14 +469,13 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 15vh;
-  .socialIncons{
+  .socialIncons {
     display: flex;
     flex-flow: row;
     gap: 5px;
-
   }
-  .icon{
-    i{
+  .icon {
+    i {
       font-size: 1.3rem;
     }
     background-color: #fff;
@@ -501,7 +488,7 @@ footer {
     height: 36px;
     padding: 0;
     font-size: 1.2rem;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   }
 
   .first {
@@ -524,7 +511,7 @@ footer {
       z-index: 50; /* Higher than .headfooter */
       width: 90%;
       margin: auto;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       pointer-events: none; /* So clicks go through to image if needed */
     }
   }
@@ -554,7 +541,7 @@ footer {
     flex-flow: column nowrap;
     justify-content: flex-end;
     align-items: center;
-    padding: 18px 0 ;
+    padding: 18px 0;
     gap: 25px;
     .ImgContainer {
       gap: 50px;
@@ -677,7 +664,7 @@ footer {
       }
     }
   }
-  .RamdanProject-button-prev{
+  .RamdanProject-button-prev {
     position: absolute;
     right: 100% !important;
   }
@@ -689,7 +676,7 @@ footer {
       .text_Layer {
         /* top: 28%;
         left: 37%; */
-  
+
         h1 {
           font-size: 20px;
         }
@@ -699,15 +686,13 @@ footer {
         }
       }
     }
-  
+
     .sections {
       .logo {
         font-size: 2rem;
         padding: 2rem;
       }
     }
-  
-    
   }
   .topBar {
     height: fit-content;
@@ -721,12 +706,11 @@ footer {
     }
   }
   .Ramdan {
-    .swiper-button-prev::after, .swiper-button-next::after {
-  
-      transform: scale(.5);
-
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      transform: scale(0.5);
     }
-}
+  }
 }
 
 @media screen and (width: 768px) {
@@ -781,7 +765,6 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 991.9px) {
   footer {
     margin-top: 10rem;
@@ -798,9 +781,7 @@ footer {
       right: 50%;
       transform: translateX(50%);
       top: -40%;
-    
     }
-    
 
     .socialBanner {
       background-image: none;
@@ -809,43 +790,33 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-   .usertext{
+  .usertext {
     display: none !important;
   }
   .Ramdan {
-    .swiper-button-prev::after, .swiper-button-next::after {
-        font-size: 31px;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 31px;
     }
-}
-.logoBoxModile img{
-  width: 100px;
-}
- 
-
-  
-
-  
+  }
+  .logoBoxModile img {
+    width: 100px;
+  }
 }
 @media screen and (max-width: 576px) {
-
   .Ramdan {
-    .swiper-button-prev::after, .swiper-button-next::after {
-  
-        font-size: 31px;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 31px;
     }
-}
-    .first .headfooter {
-      top: -20% !important;
-    
-    }
-    .user{
-      display: none;
-    }
-    .usertext{
-      display: none;
-    }
-    
-
-    
   }
-
+  .first .headfooter {
+    top: -20% !important;
+  }
+  .user {
+    display: none;
+  }
+  .usertext {
+    display: none;
+  }
+}
