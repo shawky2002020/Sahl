@@ -634,6 +634,8 @@ input:checked + .toggle-slider:before {
 .gift-checkbox {
   margin-right: 0.5rem;
   cursor: pointer;
+  transform: scale(1.5);
+
 }
 
 .gift-label {
@@ -950,8 +952,9 @@ input:checked + .toggle-slider:before {
 
   }
   .gift-text{
-    font-size: 10px;
-    margin-left: 14px;
+    font-size: 14px;
+    margin-left: 10px;
+    white-space: nowrap;
   }
   .statistics-section{
     width: 100%;
@@ -1063,6 +1066,12 @@ input:checked + .toggle-slider:before {
   .gift-cards-grid {
     grid-template-columns: 1fr;
   }
+}
+@media screen and (max-width: 420px) {
+  .gift-text{
+    font-size: 12px;
+  }
+  
 }
 
 /* Additional Gift Form Styles */

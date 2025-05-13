@@ -173,6 +173,7 @@ button {
         color: #28564d;
         height: fit-content;
         width: fit-content;
+        cursor: pointer;
       }
       .usericon {
         z-index: 3;

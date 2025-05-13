@@ -248,8 +248,7 @@ label,.text{
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 8px;
-  margin: 1rem;
+  margin: 8px 1rem;
   font-size: 0.95rem;
 }
 .cart-form-options label {
@@ -264,7 +263,7 @@ label,.text{
   gap: 8px;
   align-items: center;
   padding-top: 1rem;
-  margin:  3rem 1rem .5rem 1rem;
+  margin:  1rem 1rem .5rem 1rem;
   justify-content: flex-start;
   .proceed-text{
     white-space: nowrap;
@@ -754,10 +753,7 @@ label,.text{
     input{
       height: 25px;
     }
-    .phone-input-wrapper input{
-      height: 10px;
-      background: #000;
-    }
+    
     .phone-input-wrapper input[type="text"] , .country-select{
       height: 25px;
     }
@@ -779,14 +775,6 @@ label,.text{
     .payment-row input,.exp-date-inputs{
       height: 25px;
     }
-    /* .custom-checkbox .checkmark {
-      height: 18px;
-      width: 18px;
-    } */
-    /* .custom-checkbox .checkmark:after {
-      width: 5px;
-      
-    } */
     .proceed-text{
       font-size: 1rem;
       margin: 0 8px;
@@ -849,14 +837,19 @@ label,.text{
     margin-right: 20px;
   }
 }
-.accept-code-form{
+.cart-form-options .accept-code-form{
   display: flex;
   flex-flow: row wrap;
- margin: 8px 0; 
+  align-items: center;
+  justify-content: start;
+  margin: 12px 0 ; 
   label{
     margin-left: 10px;
     white-space: nowrap;
 
+  }
+  .accept-input{
+    max-width: 120px;
   }
 
 }
@@ -1057,8 +1050,6 @@ label,.text{
   position: absolute;
 }
 .checkmark a{
-  margin: 0 10px;
-  background: #000;
 }
 
 .payment-methods img {
@@ -1086,7 +1077,8 @@ label,.text{
   text-align: center;
 }
 .attach-btn {
-  width: 350px;
+  width: fit-content;
+  padding: 0 1rem;
   margin: 0 12px;
   transition: transform 0.2s ease;
 }

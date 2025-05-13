@@ -231,13 +231,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-// document.querySelector('.fast-pay').addEventListener('click', function() {
-//   document.getElementById('fastPayModal').style.display = 'flex';
-// });
-// Optional: Close modal when clicking outside content
-document.getElementById('fastPayModal').addEventListener('click', function(e) {
-  if (e.target === this) this.style.display = 'none';
-});
 
 document.querySelectorAll('.swiper-slide').forEach(function(slide) {
   var amountBtns = slide.querySelectorAll('.amount-btn');
@@ -252,6 +245,141 @@ document.querySelectorAll('.swiper-slide').forEach(function(slide) {
   });
 
 
+  
 
+
+});
+
+// Fast Pay Animation Implementation
+document.addEventListener("DOMContentLoaded", function() {
+  // Fast Pay functionality
+  const fastPay = document.querySelector('.fast-pay');
+  const fastPayContainer = document.querySelector('.fast-pay .container');
+  const donationForm = document.querySelector('.fast-pay .donation-form');
+  const donationOptions = document.querySelectorAll('.fast-pay .donation-option');
+  const projectGroups = document.querySelectorAll('.fast-pay .project-group');
+  const projectSelects = document.querySelectorAll('.fast-pay .project-select');
+  const donationAmounts = document.getElementById('donation-amounts');
+  const amountGroups = document.querySelectorAll('.fast-pay .amount-group');
+  
+  if (fastPayContainer) {
+    // Toggle expanded state when clicking the container
+    fastPayContainer.addEventListener('click', function(e) {
+      if (!fastPay.classList.contains('expanded')) {
+        fastPay.classList.add('expanded');
+      }
+      else {
+        fastPay.classList.remove('expanded');
+      }
+    });
+    
+    // Handle donation option selection
+    donationOptions.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Remove active class from all options
+        donationOptions.forEach(opt => opt.classList.remove('active'));
+        // Add active class to clicked option
+        this.classList.add('active');
+        
+        // Show corresponding project group
+        const selectedOption = this.dataset.option;
+        projectGroups.forEach(group => {
+          if (group.dataset.for === selectedOption) {
+            group.style.display = 'block';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+        
+        // Hide donation amounts when changing donation type
+        if (donationAmounts) {
+          donationAmounts.style.display = 'none';
+        }
+        
+        // Reset project selects
+        projectSelects.forEach(select => {
+          select.selectedIndex = 0;
+        });
+      });
+    });
+    
+    // Handle project selection
+    projectSelects.forEach(select => {
+      select.addEventListener('change', function() {
+        // Show donation amounts section
+        if (donationAmounts) {
+          donationAmounts.style.display = 'block';
+        }
+        
+        // Get the donation type from the data attribute
+        const donationType = this.dataset.type;
+        
+        // Show the corresponding amount group
+        amountGroups.forEach(group => {
+          if (group.dataset.for === donationType) {
+            group.style.display = 'block';
+          } else {
+            group.style.display = 'none';
+          }
+        });
+      });
+    });
+    
+    // Handle amount button selection
+    const amountButtons = document.querySelectorAll('.fast-pay .amount-btn');
+    amountButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        // Find the parent amount group
+        const parentGroup = this.closest('.amount-group');
+        
+        // Remove active class from all buttons in this group
+        const groupButtons = parentGroup.querySelectorAll('.amount-btn');
+        groupButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        this.classList.add('active');
+        
+        // You can also update a hidden input or variable with the selected amount
+        const amountValue = this.textContent.replace(/[^\d]/g, '');
+        console.log('Selected amount:', amountValue);
+      });
+    });
+    
+    // Show initial project group based on active donation option
+    const initialActiveOption = document.querySelector('.fast-pay .donation-option.active');
+    if (initialActiveOption) {
+      const selectedOption = initialActiveOption.dataset.option;
+      const correspondingGroup = document.querySelector(`.fast-pay .project-group[data-for="${selectedOption}"]`);
+      if (correspondingGroup) {
+        correspondingGroup.style.display = 'block';
+      }
+    }
+    
+    // Prevent form clicks from closing the container
+    if (donationForm) {
+      donationForm.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+    
+    // Close fast pay when clicking outside
+    document.addEventListener('click', function(e) {
+      if (fastPay.classList.contains('expanded') && 
+          !fastPayContainer.contains(e.target) && 
+          e.target !== fastPayContainer) {
+        fastPay.classList.remove('expanded');
+      }
+    });
+    
+    // Handle escape key to close
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && fastPay.classList.contains('expanded')) {
+        fastPay.classList.remove('expanded');
+      }
+    });
+  }
 });
 

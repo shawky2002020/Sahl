@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,6 +25,7 @@
     <!-- Custom Stylsheet-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <link rel="stylesheet" href="css/custom-card.css" />
     <link rel="stylesheet" href="css/fast-pay.css">
   </head>
@@ -62,7 +63,7 @@
                       1
                     </span>
                   </div>
-                  <div class="user-items">
+                  <div onclick="window.location.href='login.html'  " class="user-items">
   
                     <div class="usericon p-2">
                       <i class="fa-solid fa-user fs-4"></i>
@@ -269,10 +270,236 @@
 
     <div class="fast-pay">
       <div class="container">
-        <span>+</span>
+        <div class="white-layer"></div>
+        <span class="plus-btn">+</span>
         <h6>تبرع سريع</h6>
       </div>
+     
+        
+        <div class="donation-form">
+          <div class="form-title">اختر نوع التبرع</div>
+          
+          <div class="donation-options">
+            <div class="donation-option active" data-option="الإطعام">الإطعام</div>
+            <div class="donation-option" data-option="السكن">السكن</div>
+            <div class="donation-option" data-option="الكسوة">الكسوة</div>
+          </div>
+          
+          <!-- Project selection groups - each for a specific donation type -->
+          <div class="project-selection-container">
+            <!-- Projects for الإطعام -->
+            <div class="project-group" data-for="الإطعام">
+              <div class="form-group">
+                <select class="project-select" data-type="الإطعام">
+                  <option selected disabled>اختيار مشروع الإطعام</option>
+                  <option value="إفطار صائم">مشروع إفطار صائم</option>
+                  <option value="إطعام مسكين">مشروع إطعام مسكين</option>
+                  <option value="وجبات الخير">مشروع وجبات الخير</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Projects for السكن -->
+            <div class="project-group" data-for="السكن" style="display: none;">
+              <div class="form-group">
+                <select class="project-select" data-type="السكن">
+                  <option selected disabled>اختيار مشروع السكن</option>
+                  <option value="ترميم منازل">مشروع ترميم منازل</option>
+                  <option value="بناء وحدات سكنية">مشروع بناء وحدات سكنية</option>
+                  <option value="تأثيث منازل">مشروع تأثيث منازل</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Projects for الكسوة -->
+            <div class="project-group" data-for="الكسوة" style="display: none;">
+              <div class="form-group">
+                <select class="project-select" data-type="الكسوة">
+                  <option selected disabled>اختيار مشروع الكسوة</option>
+                  <option value="كسوة العيد">مشروع كسوة العيد</option>
+                  <option value="كسوة الشتاء">مشروع كسوة الشتاء</option>
+                  <option value="كسوة المدارس">مشروع كسوة المدارس</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Donation Amount Buttons - Initially Hidden -->
+          <div class="donation-amounts" id="donation-amounts" style="display: none;">
+            <!-- Default amounts for الإطعام -->
+            <div class="amount-group" data-for="الإطعام">
+              <div class="form-title">اختر مبلغ التبرع</div>
+              <div class="amount-buttons">
+                <button type="button" class="amount-btn amount-btn-1">50 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-2">100 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-3">200 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-4">500 <span class="currency">ر.س</span></button>
+              </div>
+            </div>
+            
+            <!-- Amounts for السكن -->
+            <div class="amount-group" data-for="السكن" style="display: none;">
+              <div class="form-title">اختر مبلغ التبرع</div>
+              <div class="amount-buttons">
+                <button type="button" class="amount-btn amount-btn-1">200 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-2">500 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-3">1000 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-4">2000 <span class="currency">ر.س</span></button>
+              </div>
+            </div>
+            
+            <!-- Amounts for الكسوة -->
+            <div class="amount-group" data-for="الكسوة" style="display: none;">
+              <div class="form-title">اختر مبلغ التبرع</div>
+              <div class="amount-buttons">
+                <button type="button" class="amount-btn amount-btn-1">150 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-3">450 <span class="currency">ر.س</span></button>
+                <button type="button" class="amount-btn amount-btn-4">600 <span class="currency">ر.س</span></button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" class="form-control" placeholder="الجوال">
+          </div>
+          
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="الاسم">
+          </div>
+          
+          <div class="form-title">وسيلة الدفع</div>
+          
+          <div class="payment-methods">
+            <div class="img-container">
+
+                <img src="img/pay-4.png" alt="MasterCard">
+                <img src="img/pay-2.png" alt="Visa">
+                <img src="img/pay-1.png" alt="Apple Pay">
+            </div>
+            
+          </div>
+  
+
+        <div class="bank payment-content">
+          <div class="payment-fields bank-fields">
+            <div class="form-group bank-form">
+              <label for="bank-name">اسم البنك</label>
+              <select class="bank-input" id="bank-name">
+                <option value="alrajhi">مصرف الراجحي</option>
+                <option value="alahli">البنك الأهلي</option>
+                <option value="sabb">بنك ساب</option>
+                <option value="riyad">بنك الرياض</option>
+                <!-- Add more banks as needed -->
+              </select>
+            </div>
+            <div class="form-group bank-form">
+              <label for="account-owner">اسم صاحب الحساب</label>
+              <input class="bank-input " type="text" id="account-owner">
+            </div>
+            <div class="form-group bank-form">
+              <label for="account-number">رقم الحساب</label>
+              <input class="bank-input" type="text" id="account-number">
+            </div>
+            <div class="form-group bank-form">
+              <label for="iban-number">رقم الايبان</label>
+              <input class="bank-input" type="text" id="iban-number">
+            </div>
+            <button type="button" class="pay-btn attach-btn" style="background: #22B573; min-width: 180px;">
+                ارفاق إيصال الدفع
+                <span style="font-size: 0.9rem; margin-right: 8px; color: #333;">Pdf - jpeg - png</span>
+                <i class="fa fa-paperclip"></i>
+              </button>
+  
+          </div>
+          <div class="cart-form-actions">
+            <p class="proceed-text">
+                اتمام الدفع
+            </p>
+          <button type="submit" class="pay-btn"><i class="fa fa-check"></i> الدفع</button>
+          <button type="button" class="cancel-btn"><i class="fa fa-times"></i></button>
+        </div>
+        </div>
+
+        <div class="applepay payment-content">
+            <div class="payment-fields applepay-fields" style="text-align:center;">
+              <div class="form-group applepay-form" style="justify-content:center;">
+                <span class="bank-text" style="font-size:1.2rem;display:block;margin-bottom:.5rem;">الدفع من خلال ابل باي</span>
+              </div>
+            </div>
+            <div class="cart-form-actions">
+                <p class="proceed-text">
+                    اتمام الدفع
+                </p>
+              <button type="submit" class="pay-btn"><i class="fa fa-check"></i> الدفع</button>
+              <button type="button" class="cancel-btn"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+
+        <div class="visa payment-content">
+
+          <div class="label bank-text">
+            <p>الدفع من خلال البطاقة البنكية</p>
+          </div>
+          <div class="payment-fields bank-fields">
+            <div class="form-group bank-form">
+              <label for="card-number">رقم البطاقة</label>
+              <input class="bank-input" type="text" id="card-number">
+            </div>
+            <div class="form-group bank-form">
+              <label for="card-name">اسم على البطاقة</label>
+              <input class="bank-input" type="text" id="card-name">
+            </div>
+            <div class="payment-row fast-pay-payment-row ">
+                <div class="form-group bank-form exp-form">
+                    <label for="exp-month">تاريخ الانتهاء</label>
+                    <div class="exp-date-inputs">
+                      <input class="bank-input" type="text" id="exp-month" name="exp-month" maxlength="2" placeholder="MM">
+                      <span class="exp-divider">|</span>
+                      <input class="bank-input" type="text" id="exp-year" name="exp-year" maxlength="2" placeholder="YY">
+                    </div>
+                  </div>
+              <div class="form-group bank-form ccv-form">
+                <label for="ccv">رمز الامان CCV</label>
+                <input class="bank-input ccv-input" type="text" id="ccv" name="ccv">
+              </div>
+              
+            </div>
+          </div>
+          <div class="cart-form-options ">
+            <label class="custom-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              أرغب في حفظ بيانات البطاقة
+            </label>
+            <div class="accept-code-form ">
+                <label> ادخل كود التحقق</label>
+                <input type="text" class="bank-input accept-input" >
+            </div>
+          </div>
+        <div class="cart-form-actions">
+            <p class="proceed-text">
+                اتمام الدفع
+            </p>
+          <button type="submit" class="pay-btn"><i class="fa fa-check"></i> الدفع</button>
+          <button type="button" class="cancel-btn"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="cart-form-policy bank-form">
+          <label class="custom-checkbox">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+             الموافقة على 
+             <a href="#">
+سياسات التبرع</a>
+          </label>
+        </div>
+    
+   
     </div>
+
+        </div>
+    </div>
+    
+    <!-- ... existing code ... -->
 
     <main>
       <div class="banner p-4">
@@ -342,6 +569,66 @@
                   >
                     <img src="img/moon.png" class="img-fluid" alt="" />
                     <div class="section-desc">سقى الماء</div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-2 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-1 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-2 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-1 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-2 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div
+                    class="Card d-flex align-items-center justify-content-center Card-1 p-4"
+                  >
+                    <img src="img/moon.png" class="img-fluid" alt="" />
+                    <div class="section-desc">سقى الماء</div>
+
                   </div>
                 </div>
 
@@ -643,7 +930,7 @@
         </div>
       </section>
       
-      <section class="AdsBanner mt-2">
+      <!-- <section class="AdsBanner mt-2">
         <div class="secandBanner p-lg-5">
           <div class="container">
             <div class="row">
@@ -687,7 +974,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer>
@@ -808,35 +1095,7 @@
     <!--Bootstrap cdn -->
     <script src="js/bootstrap.bundle.min.js"></script>
 
-    <!--Fast Pay Modal -->
-    <div id="fastPayModal" class="fast-pay-modal" style="display:none;">
-      <div class="fast-pay-modal-content">
-        <button class="fast-pay-modal-close" onclick="document.getElementById('fastPayModal').style.display='none'">&times;</button>
-        <h5 class="text-center mb-3">تبرع سريع</h5>
-        <div class="fast-pay-modal-body">
-          <div class="mb-2">
-            <button class="fast-pay-modal-tab">صدقتك في الحرم</button>
-            <button class="fast-pay-modal-tab active">مشاريع البر و الإحسان بمكة</button>
-          </div>
-          <div class="mb-2 d-flex flex-column align-items-start">
-            <button class="fast-pay-modal-side-tab">زكاة</button>
-            <button class="fast-pay-modal-side-tab">بركة</button>
-            <button class="fast-pay-modal-side-tab">مالي</button>
-          </div>
-          <select class="form-control mb-2">
-            <option>اختيار المشروع</option>
-          </select>
-          <input class="form-control mb-2" type="text" value="25551" />
-          <input class="form-control mb-2" type="text" value="shawky" />
-          <div class="mt-3 mb-2 fw-bold">وسيلة الدفع</div>
-          <div class="d-flex gap-2">
-            <button class="btn btn-light">Visa</button>
-            <button class="btn btn-light">Apple Pay</button>
-            <button class="btn btn-light">STC Pay</button>
-          </div>
-        </div>
-      </div>
-    </div>
+
     </body>
     <script src="js/swiper-bundle.js"></script>
 
@@ -845,5 +1104,6 @@
 
     <!--Custom Script-->
     <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>
