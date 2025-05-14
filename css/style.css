@@ -915,3 +915,645 @@ html[dir="rtl"] .RamdanProjects .swiper-button-prev {
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
+  .AdsBanner {
+    margin-bottom: 3rem;
+    
+    .banner-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .banner-row {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+    }
+    
+    .banner-card {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+    
+    .banner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .arafah-banner {
+      flex: 1;
+      height: 260px;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .arafah-banner img {
+      max-height: 100%;
+      width: 100%;
+    }
+    .arafah-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .arafah-content .banner-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .arafah-content .banner-description {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    .arafah-content .banner-cta {
+      display: inline-flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    
+    .arafah-content .banner-cta:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .arafah-content .banner-cta i {
+      margin-right: 8px;
+    }
+    
+    .right-banners {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .charity-banner, .water-banner {
+      position: relative;
+      height: 125px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .banner-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .banner-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .charity-banner .banner-content {
+      text-align: right;
+      color: white;
+      background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    
+    .water-banner .banner-content {
+      text-align: right;
+      color: white;
+      background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    }
+    
+    .banner-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .banner-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .banner-cta i {
+      font-size: 0.8rem;
+    }
+    
+    @media (max-width: 768px) {
+      .banner-row {
+        flex-direction: column;
+      }
+      
+      .arafah-banner {
+        height: 200px;
+      }
+      
+      .charity-banner, .water-banner {
+        height: 150px;
+      }
+    }
+  }
+
+.RamdanProjects {
+  h2 {
+    color: #004656;
+  }
+  .Ramdan {
+    margin-bottom: 5rem;
+  }
+
+  .infoBox {
+    .button-more {
+      background-color: #35a697 !important;
+      color: #fff;
+      padding: 8px;
+      text-align: center;
+      border-radius: 10px !important;
+    }
+  }
+}
+.RamdanProject-button-next {
+  position: absolute;
+  right: 0% !important ;
+}
+.RamdanProject-button-prev {
+  position: absolute;
+  right: 90% !important;
+}
+
+.RamdanProjects {
+  .Ramdan,
+  .Projects {
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      position: absolute;
+      color: #8a7a5a;
+      font-size: 30px;
+    }
+  }
+}
+
+footer {
+  border-radius: 1rem 1rem 0 0;
+  position: relative;
+  z-index: 500;
+  background-image: url("../img/footerBG2.png");
+  background-color: #004656;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 15vh;
+  .socialIncons {
+    display: flex;
+    flex-flow: row;
+    gap: 5px;
+  }
+  .icon {
+    i {
+      font-size: 1.3rem;
+    }
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    font-size: 1.2rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .first {
+    background-color: #35a697;
+    text-align: center;
+    margin-right: 3rem;
+    position: relative;
+    z-index: 6;
+    min-height: 300px;
+    border-radius: 1rem 1rem 0 0;
+    .headfooter {
+      z-index: -1;
+      width: 420px;
+      position: absolute;
+      right: 0;
+      top: -30%;
+    }
+    .footer-text {
+      color: #fff;
+      z-index: 50; /* Higher than .headfooter */
+      width: 90%;
+      margin: auto;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      pointer-events: none; /* So clicks go through to image if needed */
+    }
+  }
+  .secand {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+    h5 {
+      color: #acac;
+      font-weight: bolder;
+      font-size: 20px;
+    }
+    ul {
+      list-style: none;
+      li {
+        color: #fff;
+        margin-top: 10px;
+        font-weight: bolder;
+      }
+    }
+  }
+  .thrid {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 18px 0;
+    gap: 25px;
+    .ImgContainer {
+      gap: 50px;
+      img {
+        width: 100px;
+      }
+    }
+    .ImgContainer2 {
+      gap: 10px;
+      img {
+        width: 80px;
+      }
+    }
+  }
+  .fourth {
+    h5 {
+      color: #fff;
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    .fristrow {
+      gap: 10px;
+      a {
+        text-align: center;
+        border-radius: 10px;
+        padding: 4px 30px;
+        background-color: #036f7a;
+        color: #fff !important ;
+        font-size: 17px;
+      }
+    }
+    .Secandrow {
+      a {
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 72px;
+        background-color: #036f7a;
+        color: #fff !important ;
+        font-size: 17px;
+      }
+    }
+    .ThridRow {
+      gap: 19px;
+      img {
+        width: 136px;
+      }
+    }
+    p {
+      color: #28564d;
+    }
+    /* .fristrow,
+    .Secandrow {
+      gap: 10px;
+      a {
+        text-align: center;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: #a7d3d1;
+        width: 50%;
+        color: #467271 !important ;
+        font-size: 24px;
+      }
+    } */
+    .Secandrow {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    .MostNeeded {
+      .frist_section {
+        .textlayer {
+          position: absolute;
+          top: 22%;
+          right: 49%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+          .icon {
+            font-size: 50px;
+            color: #fff;
+          }
+        }
+        .text {
+          color: #fff;
+          .btn_more {
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            border-radius: 15px;
+          }
+          * {
+            font-size: 1rem;
+          }
+        }
+      }
+      .secand_section {
+        height: 94%;
+        .textLayer {
+          position: absolute;
+          top: 30%;
+          right: 10%;
+          color: #fff;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 3rem;
+          .blueText {
+            color: #37cef7;
+          }
+          .icon {
+            font-size: 3rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .RamdanProject-button-prev {
+    position: absolute;
+    right: 100% !important;
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  main {
+    .banner {
+      .text_Layer {
+        /* top: 28%;
+        left: 37%; */
+
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 10px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .sections {
+      .logo {
+        font-size: 2rem;
+        padding: 2rem;
+      }
+    }
+  }
+  .topBar {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  .navbar {
+    .collapse {
+      .navbar-nav {
+        margin-right: 0;
+      }
+    }
+  }
+  .Ramdan {
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      transform: scale(0.5);
+    }
+  }
+}
+
+@media screen and (width: 768px) {
+  main {
+    .banner {
+      .text_Layer {
+        top: 28%;
+        right: 10%;
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 30px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .MostNeeded {
+      .frist_section {
+        .textlayer {
+          position: absolute;
+          top: 6%;
+          left: 6%;
+          display: block;
+
+          .text {
+            * {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .secand_section {
+        height: 112px;
+        .text {
+          * {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .Aya {
+      .content {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  footer {
+    margin-top: 10rem;
+    padding-bottom: 2rem;
+    .first {
+      margin-right: 0;
+      font-size: 1.2rem;
+      padding-bottom: 2rem;
+    }
+    .first .headfooter {
+      z-index: -1;
+      width: 50%;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: -40%;
+    }
+
+    .socialBanner {
+      background-image: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .usertext {
+    display: none !important;
+  }
+  .Ramdan {
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 31px;
+    }
+  }
+  .logoBoxModile img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container h2{
+    font-size: 1.2rem;
+  }
+  .project h4{
+    font-size: 12px;
+  }
+  .Ramdan {
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 31px;
+    }
+  }
+  .first .headfooter {
+    top: -20% !important;
+  }
+  .user {
+    display: none;
+  }
+  .usertext {
+    display: none;
+  }
+}
+/* Improved Swiper Navigation Buttons */
+.RamdanProjects .swiper-button-next,
+.RamdanProjects .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.RamdanProjects .swiper-button-next:hover,
+.RamdanProjects .swiper-button-prev:hover {
+  transform: scale(1.05);
+}
+
+.RamdanProjects .swiper-button-next:after,
+.RamdanProjects .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.RamdanProjects .swiper-button-next:hover:after,
+.RamdanProjects .swiper-button-prev:hover:after {
+  color: #fff;
+}
+
+.RamdanProjects .swiper-button-next {
+  right: 10px;
+}
+
+.RamdanProjects .swiper-button-prev {
+  left: 10px;
+}
+
+/* For RTL layout */
+html[dir="rtl"] .RamdanProjects .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+
+html[dir="rtl"] .RamdanProjects .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .RamdanProjects .swiper-button-next,
+  .RamdanProjects .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .RamdanProjects .swiper-button-next:after,
+  .RamdanProjects .swiper-button-prev:after {
+    font-size: 16px;
+  }
+}
+
+/* Make buttons more visible on hover of the slider area */
+.Ramdan:hover .swiper-button-next,
+.Ramdan:hover .swiper-button-prev {
+  opacity: 1;
+}
+
+.RamdanProjects .swiper-button-next,
+.RamdanProjects .swiper-button-prev {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
