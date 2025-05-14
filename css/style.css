@@ -479,7 +479,7 @@ main {
 footer {
   border-radius: 1rem 1rem 0 0;
   position: relative;
-  z-index: 1000;
+  z-index: 500;
   background-image: url("../img/footerBG2.png");
   background-color: #004656;
   background-position: center;

@@ -276,7 +276,7 @@
               <div class="col-md-4 mb-4">
                 <div class="profile-sidebar">
                   <div class="sidebar-menu">
-                    <a href="#" class="sidebar-item" id="personal-info-tab">
+                    <a href="#" class="sidebar-item active" id="personal-info-tab">
                       <i class="fas fa-user-circle"></i>
                       <span>حسابك الشخصي</span>
                     </a>
@@ -284,7 +284,7 @@
                       <i class="fas fa-chart-pie"></i>
                       <span>إحصائيات</span>
                     </a>
-                    <a href="#" class="sidebar-item active" id="orders-tab">
+                    <a href="#" class="sidebar-item " id="orders-tab">
                       <i class="fas fa-clipboard-list"></i>
                       <span>سجل الطلبات</span>
                     </a>
@@ -315,13 +315,12 @@
               <!-- Main Content -->
               <div class="col-md-8">
                 <!-- Personal Info Section (Hidden) -->
-                <div class="profile-content" id="personal-info-content" style="display: none;">
+                <div class="profile-content" id="personal-info-content">
                   <!-- Profile Header -->
                   <div class="profile-header mb-4">
                     <h2 class="section-title">معلومات حسابك الشخصي</h2>
                   </div>
                   
-                  <!-- Profile Information -->
                   <div class="profile-info-card">
                     <div class="profile-info-item">
                       <div class="row align-items-center">
@@ -348,10 +347,31 @@
                       <button class="btn edit-profile-btn">تعديل</button>
                     </div>
                   </div>
+
+                  <div class="profile-header mb-4 mt-2">
+                    <h2 class="section-title">إحصائيات</h2>
+                  </div>
+                  
+                  <div class="statistics-cards">
+                    <div class="row">
+                      <div class="col-md-6 mb-4">
+                        <div class="stat-card">
+                          <div class="stat-value">6658</div>
+                          <div class="stat-label">إجمالي المبالغ</div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6 mb-4">
+                        <div class="stat-card">
+                          <div class="stat-value">18</div>
+                          <div class="stat-label">عدد مرات التبرع</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
-                <!-- Statistics Section (Hidden) -->
-                <div class="profile-content" id="statistics-content" style="display: none;">
+                <div class="profile-content" id="statistics-content" >
                   <div class="profile-header mb-4">
                     <h2 class="section-title">إحصائيات</h2>
                   </div>
@@ -375,8 +395,7 @@
                   </div>
                 </div>
                 
-                <!-- Orders Section (Visible) -->
-                <div class="profile-content" id="orders-content" style="">
+                <div class="profile-content" id="orders-content" >
                   <div class="profile-header mb-4">
                     <h2 class="section-title">سجل الطلبات</h2>
                   </div>
@@ -511,7 +530,138 @@
                     </nav>
                   </div>
                 </div>
-                
+<div class="profile-content" id="payment-cards-content" >
+  <div class="profile-header mb-4">
+    <h2 class="section-title">بطاقات الدفع</h2>
+    <p class="section-description">يمكنك إدارة بطاقات الدفع الخاصة بك هنا</p>
+  </div>
+  
+  <!-- Saved Cards -->
+  <div class="saved-cards-container mb-4">
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-6 mb-3">
+        <div class="payment-card visa">
+          <div class="card-header">
+            <div class="card-type">
+              <img src="img/visa.png" alt="Visa" class="card-logo">
+            </div>
+            <div class="card-actions">
+              <button class="card-action-btn edit-card" title="تعديل">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="card-action-btn delete-card" title="حذف">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-number">**** **** **** 4582</div>
+            <div class="card-info">
+              <div class="card-holder">محمد تامر</div>
+              <div class="card-expiry">12/25</div>
+            </div>
+            <div class="default-badge">البطاقة الافتراضية</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="col-md-6 mb-3">
+        <div class="payment-card mastercard">
+          <div class="card-header">
+            <div class="card-type">
+              <img src="img/mastercard.png" alt="Mastercard" class="card-logo">
+            </div>
+            <div class="card-actions">
+              <button class="card-action-btn edit-card" title="تعديل">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="card-action-btn delete-card" title="حذف">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-number">**** **** **** 7891</div>
+            <div class="card-info">
+              <div class="card-holder">محمد تامر</div>
+              <div class="card-expiry">09/26</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Add New Card Button -->
+  <div class="text-center mb-4">
+    <button class="btn add-card-btn" id="show-add-card-form">
+      <i class="fas fa-plus-circle me-2"></i>
+      إضافة بطاقة جديدة
+    </button>
+  </div>
+  
+  <!-- Add New Card Form (Hidden by default) -->
+  <div class="add-card-form-container" id="add-card-form" >
+    <div class="form-header">
+      <h3>إضافة بطاقة جديدة</h3>
+      <button class="close-form-btn" id="close-add-card-form">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <form class="add-card-form">
+      <div class="form-group mb-3">
+        <label for="card-number" class="form-label">رقم البطاقة</label>
+        <input type="text" class="form-control" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19">
+      </div>
+      
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="card-expiry" class="form-label">تاريخ الانتهاء</label>
+            <input type="text" class="form-control" id="card-expiry" placeholder="MM/YY" maxlength="5">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="card-cvv" class="form-label">رمز الأمان (CVV)</label>
+            <input type="password" class="form-control" id="card-cvv" placeholder="***" maxlength="3">
+          </div>
+        </div>
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="card-holder" class="form-label">اسم حامل البطاقة</label>
+        <input type="text" class="form-control" id="card-holder" placeholder="الاسم كما يظهر على البطاقة">
+      </div>
+      
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" id="set-default-card">
+        <label class="form-check-label" for="set-default-card">
+          تعيين كبطاقة افتراضية
+        </label>
+      </div>
+      
+      <div class="form-actions">
+        <button type="button" class="btn cancel-btn" id="cancel-add-card">إلغاء</button>
+        <button type="submit" class="btn save-card-btn">حفظ </button>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Security Notice -->
+  <div class="security-notice">
+    <div class="notice-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="notice-text">
+      <h4>معلوماتك آمنة معنا</h4>
+      <p>نستخدم تقنيات تشفير متقدمة لحماية بيانات بطاقتك. لن نشارك معلوماتك مع أي طرف ثالث.</p>
+    </div>
+  </div>
+</div>
                
               
               </div>
@@ -643,4 +793,5 @@
     <script src="js/wow.min.js"></script>
     <!--Custom Script-->
     <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
 </html>
