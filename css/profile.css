@@ -297,7 +297,7 @@
   color: #e0a800;
 }
 
-.status-badge.cancelled {
+.status-badge.canceled {
   background-color: #f8d7da;
   color: #dc3545;
 }
@@ -624,4 +624,27 @@
 .form-check-input:checked {
   background-color: #35a697;
   border-color: #35a697;
+}
+
+/* No Cards Found State */
+.no-cards-container {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px dashed #dee2e6;
+}
+
+.no-cards-icon {
+  color: #adb5bd;
+}
+
+.no-cards-title {
+  color: #495057;
+  font-weight: 600;
+}
+
+.no-cards-description {
+  color: #6c757d;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
