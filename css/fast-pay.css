@@ -280,7 +280,13 @@
 @media (max-width: 576px) {
   .fast-pay .container {
     width: 300px;
-    transform: translateX(150px);
+    transform: translateX(250px);
+    .plus-btn{
+      width: 50px;
+    }
+    .white-layer{
+      width: 50px;
+    }
   }
 
   .fast-pay .donation-option {
