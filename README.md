@@ -1,4 +1,5 @@
-![logo](https://github.com/user-attachments/assets/4e2a712e-47c1-410a-83ed-fc44bc060e79)# Sahl – Saudi Islamic Donations Website
+![logo](https://github.com/user-attachments/assets/4e2a712e-47c1-410a-83ed-fc44bc060e79)
+# Sahl – Saudi Islamic Donations Website
 
 
 **Sahl** is a responsive Islamic donation platform designed for Saudi users. Built with **HTML**, **CSS**, **JavaScript**, and **Bootstrap**, the website provides a clean, user-friendly interface to support charitable giving aligned with Islamic values.
